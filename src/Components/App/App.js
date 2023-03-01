@@ -10,7 +10,7 @@ import SavedEvents from '../SavedEvents/SavedEvents';
 const App = () => {
 
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <Routes>
         <Route path='/events' element={<Events />}/>

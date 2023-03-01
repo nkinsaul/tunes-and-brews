@@ -1,9 +1,11 @@
 import React from "react";
 import './EventCard.css'
 
-const EventCard = () => {
+const EventCard = ({image, name}) => {
   return (
-    <h1>Event Card</h1>
+    <div className="event-card">
+      <img className="event-image" src={image.url}/>
+    </div>
   )
 }
 

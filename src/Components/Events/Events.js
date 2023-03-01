@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import './Events.css'
-
+import EventCard from "../EventCard/EventCard";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -25,9 +25,19 @@ const Events = () => {
   },[])
 
   return (
-    <div>
-      {(loading) ? <h1>Loading...</h1> : <h1>{events[0].name}</h1>}
-    </div>
+    <>
+      {(loading) ? <h1>Loading...</h1> :
+      <div className="events-card-container">
+        {events.map(event => 
+          <EventCard 
+            key={event.id}
+            id={event.id}
+            image={event.images.find(image => image.ratio === '3_2' && image.width === 640)}
+            name={event.name}
+          />)}
+      </div>
+      }
+    </>
   )
 }
 
