@@ -1,4 +1,5 @@
 import React from "react";
+import './EventView.css'
 
 const EventView = () => {
   return (

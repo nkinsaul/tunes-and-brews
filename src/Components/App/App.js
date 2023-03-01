@@ -8,7 +8,6 @@ import Events from '../Events/Events';
 import SavedEvents from '../SavedEvents/SavedEvents';
 
 const App = () => {
-  // const [events, setEvents] = useState();
 
   return (
     <div className="App">
