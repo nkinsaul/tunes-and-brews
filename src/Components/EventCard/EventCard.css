@@ -1,6 +1,7 @@
 .event-card {
   width: 100%;
   height: 100%;
+  text-decoration: none;
 }
 
 .event-image {
@@ -26,5 +27,9 @@
 .p {
   margin: 0;
   padding-left: 2%; 
+}
+
+a {
+  text-decoration: none;
 }
 
