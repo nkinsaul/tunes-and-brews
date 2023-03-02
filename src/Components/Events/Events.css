@@ -1,9 +1,16 @@
+.events-home {
+  padding-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .events-card-container {
   background-color: rgb(255, 255, 255);
   display: grid;
   grid-template: "container";
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2%;
+  grid-gap: 3%;
   height: 150%;
-  padding: 3% 3% 0% 3%;
+  padding: 3% 12% 0% 12%;
 }

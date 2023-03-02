@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import './Events.css'
 import EventCard from "../EventCard/EventCard";
+import SearchForm from "../SearchForm/SearchForm";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -27,17 +28,20 @@ const Events = () => {
   return (
     <>
       {(loading) ? <h1>Loading...</h1> :
-      <div className="events-card-container">
-        {events.map(event => 
-          <EventCard 
-            key={event.id}
-            id={event.id}
-            image={event.images.find(image => image.ratio === '3_2' && image.width === 640)}
-            name={event.name}
-            venue={event._embedded.venues[0].name}
-            date={event.dates.start.dateTime}
-          />)}
-      </div>
+      <div className="events-home">
+        <SearchForm />
+        <div className="events-card-container">
+          {events.map(event => 
+            <EventCard 
+              key={event.id}
+              id={event.id}
+              image={event.images.find(image => image.ratio === '3_2' && image.width === 640)}
+              name={event.name}
+              venue={event._embedded.venues[0].name}
+              date={event.dates.start.dateTime}
+            />)}
+        </div>
+      </div>  
       }
     </>
   )
