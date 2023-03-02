@@ -20,19 +20,25 @@ const EventView = () => {
       const _event = await response.json()
       setEvent(_event)
       setLoading(false)
+      const image = _event.images.find(image => image.ratio === '16_9')
     } catch {
       setError(error.status)
     }
   }
 
   useEffect(() => {
-    getEvent(event_id)
+    getEvent()
   }, [])
+
+  const image = _event.images?.find(image => 
+    image.ratio === '16_9' && image.width === 1024)
 
   return (
     <>
       {(loading) ? <h1>Loading...</h1> :
-      <h1>{_event.name}</h1>}
+      <div>
+        <img src={image.url} />
+      </div>}
     </>
   )
 }
