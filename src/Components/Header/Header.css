@@ -1,0 +1,17 @@
+.header {
+  font-family: 'Bangers', cursive;
+  background-color: rgb(252, 163, 17);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.app-name {
+  font-size: 6em;
+  letter-spacing: 10px;
+}
+
+.link {
+  font-size: 2em;
+}
