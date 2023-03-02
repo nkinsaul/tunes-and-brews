@@ -35,6 +35,7 @@ const Events = () => {
             image={event.images.find(image => image.ratio === '3_2' && image.width === 640)}
             name={event.name}
             venue={event._embedded.venues[0].name}
+            date={event.dates.start.dateTime}
           />)}
       </div>
       }
