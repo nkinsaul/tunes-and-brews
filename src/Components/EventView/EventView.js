@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { useLocation } from "react-router-dom";
 import './EventView.css'
 import { getEvent } from "../../utilities/apiCalls";
+import dayjs from "dayjs";
 
 const EventView = () => {
   const [_event, setEvent] = useState({});
@@ -24,9 +25,12 @@ const EventView = () => {
     <>
       {(loading) ? <h1>Loading...</h1> :
       <div>
-        <h1>{_event.name}</h1>
-        <h2>{_event._embedded.venues[0].name}</h2>
-        <img src={image.url} />
+        <div className="event-details">
+          <h1>{_event.name}</h1>
+          <h2>{_event._embedded.venues[0].name}</h2>
+          <p>{dayjs(_event.dates.start.dateTime).format('MMM/DD/YYYY')}</p>
+        </div>
+        <img className='event-image' src={image.url} />
       </div>}
     </>
   )
