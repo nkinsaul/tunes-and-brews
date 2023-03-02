@@ -14,7 +14,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path='/events' element={<Events />}/>
-        <Route path='/:eventID' element={<EventView />}/>
+        <Route path='/events/:eventID' element={<EventView />}/>
         <Route path='/saved' element={<SavedEvents />}/>
       </Routes>
     </div>

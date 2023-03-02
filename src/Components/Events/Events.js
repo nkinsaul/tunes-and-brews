@@ -31,14 +31,14 @@ const Events = () => {
       <div className="events-home">
         <SearchForm />
         <div className="events-card-container">
-          {events.map(event => 
+          {events.map(_event => 
             <EventCard 
-              key={event.id}
-              id={event.id}
-              image={event.images.find(image => image.ratio === '3_2' && image.width === 640)}
-              name={event.name}
-              venue={event._embedded.venues[0].name}
-              date={event.dates.start.dateTime}
+              key={_event.id}
+              id={_event.id}
+              image={_event.images.find(image => image.ratio === '3_2' && image.width === 640)}
+              name={_event.name}
+              venue={_event._embedded.venues[0].name}
+              date={_event.dates.start.dateTime}
             />)}
         </div>
       </div>  

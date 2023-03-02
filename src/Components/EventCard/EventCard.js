@@ -3,9 +3,9 @@ import './EventCard.css'
 import dayjs from "dayjs";
 import { Link } from "react-router-dom";
 
-const EventCard = ({image, name, venue, date}) => {
+const EventCard = ({image, name, venue, date, id}) => {
   return (
-    <Link>
+    <Link to={`/events/${id}`}>
       <div className="event-card">
         <img className="event-image" src={image.url}/>
         <div className="event-info">
