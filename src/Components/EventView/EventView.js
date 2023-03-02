@@ -13,8 +13,8 @@ const EventView = () => {
   const event_id = location.pathname.slice(1);
 
   const getEvent = async () => {
-    const url = `https://app.ticketmaster.com/discovery/v2/events/${event_id}.json?classificationName=music&dmaId=385&apikey=${apiKey}`
-
+  const url = `https://app.ticketmaster.com/discovery/v2/events/${event_id}.json?classificationName=music&dmaId=385&apikey=${apiKey}`
+   
     try {
       const response = await fetch(url)
       const _event = await response.json()
@@ -26,9 +26,8 @@ const EventView = () => {
   }
 
   useEffect(() => {
-    getEvent()
+    getEvent(event_id)
   }, [])
-
 
   return (
     <>
