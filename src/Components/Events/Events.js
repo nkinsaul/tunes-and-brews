@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import './Events.css'
 import EventCard from "../EventCard/EventCard";
 import SearchForm from "../SearchForm/SearchForm";
+const apiKey = process.env.REACT_APP_TICKETMASTERKEY
+console.log(apiKey)
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -9,7 +11,7 @@ const Events = () => {
   const [error, setError] = useState('')
 
   const getEvents = async () => {
-    const url = 'https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=385&apikey=GsEb44ExGWUeR5lOEg7Tugd2PdKAnKWl'
+    const url = `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=385&apikey=${apiKey}`
 
     try {
       const response = await fetch(url)
