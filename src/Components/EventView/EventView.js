@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import './EventView.css'
 import { getEvent } from "../../utilities/apiCalls";
 import dayjs from "dayjs";
+import { Link } from "react-router-dom";
 
 const EventView = () => {
   const [_event, setEvent] = useState({});
@@ -29,6 +30,11 @@ const EventView = () => {
           <h1>{_event.name}</h1>
           <h2>{_event._embedded.venues[0].name}</h2>
           <p>{dayjs(_event.dates.start.dateTime).format('MMM/DD/YYYY')}</p>
+          <p>Ticket price range: 
+            ${Math.round(_event.priceRanges[0].min)} - 
+            ${Math.round(_event.priceRanges[0].max)}
+          </p>
+          <a href={`${_event.url}`}>Buy Tickets</a>
         </div>
         <img className='event-image' src={image.url} />
       </div>}

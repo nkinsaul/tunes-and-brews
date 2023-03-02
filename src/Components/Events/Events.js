@@ -6,8 +6,8 @@ import { getEvents } from "../../utilities/apiCalls";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     getEvents()
