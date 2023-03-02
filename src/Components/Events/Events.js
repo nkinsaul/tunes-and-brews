@@ -3,7 +3,6 @@ import './Events.css'
 import EventCard from "../EventCard/EventCard";
 import SearchForm from "../SearchForm/SearchForm";
 const apiKey = process.env.REACT_APP_TICKETMASTERKEY
-console.log(apiKey)
 
 const Events = () => {
   const [events, setEvents] = useState([]);

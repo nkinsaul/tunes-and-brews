@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const EventCard = ({image, name, venue, date, id}) => {
   return (
-    <Link to={`/events/${id}`}>
+    <Link to={`/${id}`}>
       <div className="event-card">
         <img className="event-image" src={image.url}/>
         <div className="event-info">
