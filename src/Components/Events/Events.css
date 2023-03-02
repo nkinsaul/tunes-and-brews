@@ -1,7 +1,9 @@
 .events-card-container {
+  background-color: rgb(255, 255, 255);
   display: grid;
+  grid-template: "container";
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1%;
-  height: 120%;
-  padding: 0% 3% 0% 3%;
+  grid-gap: 2%;
+  height: 150%;
+  padding: 3% 3% 0% 3%;
 }
