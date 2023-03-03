@@ -20,8 +20,14 @@ const Breweries = ({postalCode, city}) => {
   return (
     <>
       {(loading) ? <h1>Loading...</h1> :
-      filteredBreweries.map(brewery => {
-        return <p>{brewery.name}</p>
+      filteredBreweries.map((brewery, index) => {
+        return (
+          <div key={index} className="brewery">
+            <h3 className="brewE">{brewery.name}</h3>
+            <p className="brewE">{brewery.street}</p>
+            <a className="brew-link" href={`${brewery.reviewlink}`}>Link</a>
+          </div>
+        )
       })}
     </>
   )
