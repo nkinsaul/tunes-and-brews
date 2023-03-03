@@ -2,29 +2,17 @@ import React, {useState, useEffect} from "react";
 import './Events.css'
 import EventCard from "../EventCard/EventCard";
 import SearchForm from "../SearchForm/SearchForm";
-const apiKey = process.env.REACT_APP_TICKETMASTERKEY
-console.log(apiKey)
+import { getEvents } from "../../utilities/apiCalls";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
-
-  const getEvents = async () => {
-    const url = `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=385&apikey=${apiKey}`
-
-    try {
-      const response = await fetch(url)
-      const events = await response.json()
-      setEvents(events._embedded.events)
-      setLoading(false)
-    } catch(error) {
-      setError(error.status)
-    }
-  }
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     getEvents()
+    .then((data) => {return setEvents(data._embedded.events), setLoading(false)})
+    .catch(setError(error))
   },[])
 
   return (
@@ -33,14 +21,15 @@ const Events = () => {
       <div className="events-home">
         <SearchForm />
         <div className="events-card-container">
-          {events.map(event => 
+          {events.map(_event => 
             <EventCard 
-              key={event.id}
-              id={event.id}
-              image={event.images.find(image => image.ratio === '3_2' && image.width === 640)}
-              name={event.name}
-              venue={event._embedded.venues[0].name}
-              date={event.dates.start.dateTime}
+              key={_event.id}
+              id={_event.id}
+              image={_event.images.find(image => 
+                image.ratio === '3_2' && image.width === 640)}
+              name={_event.name}
+              venue={_event._embedded.venues[0].name}
+              date={_event.dates.start.dateTime}
             />)}
         </div>
       </div>  

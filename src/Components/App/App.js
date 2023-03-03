@@ -1,6 +1,5 @@
 
 import './App.css';
-import React, { useState, useEffect } from 'react';
 import Header from '../Header/Header';
 import {Route, Routes} from 'react-router-dom'
 import EventView from '../EventView/EventView';

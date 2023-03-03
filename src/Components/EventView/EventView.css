@@ -1,0 +1,41 @@
+
+.event-view-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.event-details {
+  padding: 3% 0% 0% 3%;
+  width: 44%;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-text {
+  padding: 2%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.event-headers {
+  text-align: center;
+}
+
+.event-image {
+  margin-top: 2%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.element {
+  margin: 0;
+}
+
+.breweries-container {
+  width: 40%;
+}
