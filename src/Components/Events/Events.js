@@ -6,11 +6,13 @@ import { getEvents } from "../../utilities/apiCalls";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
+  const [filteredEvents, setFilteredEvents] = useState([])
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   const updateSearch = (keyword, date) => {
-    
+    const filteredEvents = events.filter(_event => _event.name.includes(keyword) || _event.dates.start.dateTime === date)
+    setEvents(filteredEvents)
   }
 
   useEffect(() => {
@@ -25,6 +27,7 @@ const Events = () => {
       <div className="events-home">
         <SearchForm updateSearch={updateSearch}/>
         <div className="events-card-container">
+
           {events.map(_event => 
             <EventCard 
               key={_event.id}

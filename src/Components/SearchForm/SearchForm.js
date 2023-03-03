@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import './SearchForm.css'
 
-const SearchForm = () => {
+const SearchForm = ({updateSearch}) => {
   const [keyword, setKeyword] = useState('');
   const [date, setDate] = useState('');
 
