@@ -9,6 +9,10 @@ const Events = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
+  const updateSearch = (input) => {
+
+  }
+
   useEffect(() => {
     getEvents()
     .then((data) => {return setEvents(data._embedded.events), setLoading(false)})
@@ -19,7 +23,7 @@ const Events = () => {
     <>
       {(loading) ? <h1>Loading...</h1> :
       <div className="events-home">
-        <SearchForm />
+        <SearchForm updateSearch={updateSearch}/>
         <div className="events-card-container">
           {events.map(_event => 
             <EventCard 

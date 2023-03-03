@@ -1,9 +1,14 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './SearchForm.css'
 
 const SearchForm = () => {
   const [keyword, setKeyword] = useState('');
-  const [date, setDate] = useState();
+  const [date, setDate] = useState('');
+
+
+  useEffect(() => {
+    console.log('date changed', date)
+  }, [keyword, date])
 
   return (
     <form className="search-form">
@@ -17,7 +22,7 @@ const SearchForm = () => {
         />
 
         <input 
-          type="date"
+          type='date'
           value={date}
           onChange={e => setDate(e.target.value)}
         />
