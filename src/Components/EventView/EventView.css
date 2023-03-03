@@ -40,7 +40,8 @@
   width: 20%;
   height: 30em;
   overflow: scroll;
-  border: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   padding: 1% 0% 0% 3%;
   margin: 8% 0% 0% 3%;
 }

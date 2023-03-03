@@ -27,7 +27,7 @@ const Breweries = ({postalCode, city}) => {
             <div key={index} className="brewery">
               <h3 className="brewE">{brewery.name}</h3>
               <p className="brewE">{brewery.street}</p>
-              <a className="brew-link" href={`${brewery.reviewlink}`}>Link</a>
+              <a className="brew-link" href={`${brewery.reviewlink}`}>More Info</a>
             </div>
           )
         })} 
