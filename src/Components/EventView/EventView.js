@@ -46,6 +46,7 @@ const EventView = () => {
         <div className="breweries-container">
           <Breweries 
             postalCode={_event._embedded.venues[0].postalCode}
+            city={_event._embedded.venues[0].city.name.toLowerCase()}
           />
         </div>
       </div>}
