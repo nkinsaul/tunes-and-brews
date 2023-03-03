@@ -9,8 +9,8 @@ const Events = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  const updateSearch = (input) => {
-
+  const updateSearch = (keyword, date) => {
+    
   }
 
   useEffect(() => {

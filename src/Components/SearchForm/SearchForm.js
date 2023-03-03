@@ -7,7 +7,7 @@ const SearchForm = () => {
 
 
   useEffect(() => {
-    console.log('date changed', date)
+    updateSearch(keyword, date)
   }, [keyword, date])
 
   return (
