@@ -24,7 +24,8 @@ const App = () => {
     <div className="app">
       <Header />
       <Routes>
-        <Route path='/events' element= {(loading) ? <h1>Loading...</h1> :
+        <Route path='/events' element= {(loading) ? 
+          <h1>Loading...</h1> : 
           <Events events={events}/>}/>
         <Route path='/:eventID' element={<EventView />}/>
         <Route path='/saved' element={<SavedEvents />}/>
