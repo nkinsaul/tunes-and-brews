@@ -1,7 +1,7 @@
 .header {
   font-family: 'Bangers', cursive;
-  background-color: rgb(252, 163, 17);
-  color: white;
+  background-color: rgb(20, 33, 61);
+  color: rgb(252, 163, 17);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -13,5 +13,10 @@
 }
 
 .link {
+  color:rgb(252, 163, 17);
   font-size: 2em;
+}
+
+a {
+  text-decoration: none;
 }
