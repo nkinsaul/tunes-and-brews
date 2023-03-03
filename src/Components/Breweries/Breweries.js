@@ -13,8 +13,17 @@ const Breweries = ({postalCode, city}) => {
     .catch(setError(error))
   },[])
 
+  const filteredBreweries = breweries?.filter(brewery => {
+    return brewery.zip === postalCode
+  })
+
   return (
-    <h1>Brewery List</h1>
+    <>
+      {(loading) ? <h1>Loading...</h1> :
+      filteredBreweries.map(brewery => {
+        return <p>{brewery.name}</p>
+      })}
+    </>
   )
 }
 
