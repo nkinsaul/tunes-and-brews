@@ -3,12 +3,12 @@ import './SearchForm.css'
 
 const SearchForm = ({updateSearch}) => {
   const [keyword, setKeyword] = useState('');
-  const [date, setDate] = useState('');
+  // const [date, setDate] = useState('');
 
 
   useEffect(() => {
-    updateSearch(keyword, date)
-  }, [keyword, date])
+    updateSearch(keyword)
+  }, [keyword])
 
   return (
     <form className="search-form">
@@ -16,15 +16,9 @@ const SearchForm = ({updateSearch}) => {
       <div className="inputs">
         <input 
           type='search'
-          placeholder="Keyword"
+          placeholder="Event or Venue Name"
           value={keyword}
           onChange={e => setKeyword(e.target.value)}
-        />
-
-        <input 
-          type='date'
-          value={date}
-          onChange={e => setDate(e.target.value)}
         />
       </div>
     </form>

@@ -4,21 +4,20 @@ import EventCard from "../EventCard/EventCard";
 import SearchForm from "../SearchForm/SearchForm";
 import { getEvents } from "../../utilities/apiCalls";
 
-const Events = () => {
-  const [events, setEvents] = useState([]);
-  const [filteredEvents, setFilteredEvents] = useState([])
+const Events = ({events}) => {
+  const [allEvents, setEvents] = useState([]);
+  const [filteredEvents, setFilteredEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  const updateSearch = (keyword, date) => {
-    const filteredEvents = events.filter(_event => _event.name.includes(keyword) || _event.dates.start.dateTime === date)
-    setEvents(filteredEvents)
+  const updateSearch = (keyword) => {
+    const filteredEvents = events.filter(_event => _event.name.toLowerCase().includes(keyword) || _event._embedded.venues[0].name.toLowerCase().includes(keyword))
+    setFilteredEvents(filteredEvents)
   }
 
   useEffect(() => {
-    getEvents()
-    .then((data) => {return setEvents(data._embedded.events), setLoading(false)})
-    .catch(setError(error))
+    // setEvents(events)
+    setLoading(false)
   },[])
 
   return (
@@ -27,8 +26,20 @@ const Events = () => {
       <div className="events-home">
         <SearchForm updateSearch={updateSearch}/>
         <div className="events-card-container">
+          {(filteredEvents) ?  
+          
+          filteredEvents.map(_event =>
+          <EventCard 
+              key={_event.id}
+              id={_event.id}
+              image={_event.images.find(image => 
+                image.ratio === '3_2' && image.width === 640)}
+              name={_event.name}
+              venue={_event._embedded.venues[0].name}
+              date={_event.dates.start.dateTime}
+          />) :
 
-          {events.map(_event => 
+          events.map(_event => 
             <EventCard 
               key={_event.id}
               id={_event.id}
