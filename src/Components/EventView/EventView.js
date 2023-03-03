@@ -34,10 +34,11 @@ const EventView = () => {
             </div>
             <div className="event-ticket-details">
               <p className="element">{dayjs(_event.dates.start.dateTime).format('MMM DD, YYYY')}</p>
+              {!_event.priceRanges ? <p>No ticket Data available</p> : 
               <p className="element">Ticket price range: 
                 ${Math.round(_event.priceRanges[0].min)} - 
                 ${Math.round(_event.priceRanges[0].max)}
-              </p>
+              </p>}
               <a href={`${_event.url}`}>Buy Tickets</a>
              </div>
           </div>
@@ -46,6 +47,7 @@ const EventView = () => {
         <div className="breweries-container">
           <Breweries 
             postalCode={_event._embedded.venues[0].postalCode}
+            city={_event._embedded.venues[0].city.name.toLowerCase()}
           />
         </div>
       </div>}

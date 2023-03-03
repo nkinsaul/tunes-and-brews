@@ -3,6 +3,7 @@ import './SearchForm.css'
 
 const SearchForm = () => {
   const [keyword, setKeyword] = useState();
+  const [date, setDate] = useState();
 
   return (
     <form className="search-form">
@@ -17,6 +18,7 @@ const SearchForm = () => {
 
         <input 
           type="date"
+          value={date}
         />
       </div>
     </form>
