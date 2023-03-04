@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+
 import './SavedEvents.css'
 import EventCard from "../EventCard/EventCard";
 

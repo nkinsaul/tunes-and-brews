@@ -7,7 +7,7 @@ const SearchForm = ({updateSearch}) => {
 
 
   useEffect(() => {
-    updateSearch(keyword)
+    updateSearch(keyword.toLowerCase())
   }, [keyword])
 
   return (
