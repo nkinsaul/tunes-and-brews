@@ -10,7 +10,7 @@
 .inputs {
   height: 3em;
   display: flex;
-  width: 50%;
+  width: 80%;
   justify-content: space-evenly;
 }
 

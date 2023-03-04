@@ -2,26 +2,26 @@ import React, {useState, useEffect} from "react";
 import './Events.css'
 import EventCard from "../EventCard/EventCard";
 import SearchForm from "../SearchForm/SearchForm";
-import { getEvents } from "../../utilities/apiCalls";
 
-const Events = () => {
-  const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+const Events = ({events}) => {
 
-  useEffect(() => {
-    getEvents()
-    .then((data) => {return setEvents(data._embedded.events), setLoading(false)})
-    .catch(setError(error))
-  },[])
+  const [filteredEvents, setFilteredEvents] = useState([]);
+
+  const updateSearch = (keyword) => {
+    const filteredEvents = events.filter(_event => _event.name.toLowerCase().includes(keyword) || _event._embedded.venues[0].name.toLowerCase().includes(keyword))
+    setFilteredEvents(filteredEvents)
+  }
+
+  const renderEvents = () => {
+    return filteredEvents ? filteredEvents : events 
+  }
 
   return (
     <>
-      {(loading) ? <h1>Loading...</h1> :
       <div className="events-home">
-        <SearchForm />
+        <SearchForm updateSearch={updateSearch}/>
         <div className="events-card-container">
-          {events.map(_event => 
+          {renderEvents().map(_event => 
             <EventCard 
               key={_event.id}
               id={_event.id}
@@ -33,7 +33,6 @@ const Events = () => {
             />)}
         </div>
       </div>  
-      }
     </>
   )
 }
