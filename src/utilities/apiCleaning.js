@@ -1,4 +1,4 @@
-import React from "react";
+
 import dayjs from "dayjs";
 
 export const cleanEvents = (events) => {
@@ -14,6 +14,9 @@ export const cleanEvents = (events) => {
   })
   const sortedEvents = cleanedEvents.sort((a, b) => {
     return a.date - b.date
+  })
+  sortedEvents.forEach(_event => {
+    _event.date = dayjs(_event.date).format('MMM DD, YYYY')
   })
   return sortedEvents
 }

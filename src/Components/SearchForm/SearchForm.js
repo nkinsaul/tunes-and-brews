@@ -3,8 +3,6 @@ import './SearchForm.css'
 
 const SearchForm = ({updateSearch}) => {
   const [keyword, setKeyword] = useState('');
-  // const [date, setDate] = useState('');
-
 
   useEffect(() => {
     updateSearch(keyword.toLowerCase())

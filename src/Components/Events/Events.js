@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import './Events.css'
 import EventCard from "../EventCard/EventCard";
 import SearchForm from "../SearchForm/SearchForm";
-import dayjs from "dayjs";
 
 const Events = ({events}) => {
 
@@ -31,7 +30,7 @@ const Events = ({events}) => {
               image={_event.image}
               name={_event.name}
               venue={_event.venue}
-              date={dayjs(_event.date).format('MMM DD, YYYY')}
+              date={_event.date}
             />)}
         </div>
       </div>  
