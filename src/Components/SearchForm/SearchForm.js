@@ -3,15 +3,13 @@ import './SearchForm.css'
 
 const SearchForm = ({updateSearch}) => {
   const [keyword, setKeyword] = useState('');
-  // const [date, setDate] = useState('');
-
 
   useEffect(() => {
-    updateSearch(keyword)
+    updateSearch(keyword.toLowerCase())
   }, [keyword])
 
   return (
-    <form className="search-form">
+    <form className="search-form" onSubmit={(event) => event.preventDefault()}>
       <h4>Search for Events</h4>
       <div className="inputs">
         <input 
