@@ -8,6 +8,7 @@ import SavedEvents from '../SavedEvents/SavedEvents';
 import { useState, useEffect } from 'react';
 import { getEvents } from '../../utilities/apiCalls';
 import { cleanEvents } from '../../utilities/apiCleaning';
+import Error from '../Errors/Errors';
 
 const App = () => {
 
@@ -36,7 +37,7 @@ const App = () => {
     setEvents(cleanedEventsData)
     setLoading(false)
     } catch(error) {
-      setError(error.message)
+      setError(error)
     }
   } 
 
@@ -48,11 +49,18 @@ const App = () => {
     <div className="app">
       <Header />
       <Routes>
-        <Route path='/events' element= {(loading) ? 
-          <h1>Loading...</h1> : 
-          <Events events={events}/>}/>
-        <Route path='/:eventID' element={<EventView saveEvent={addSavedEvent}/>}/>
-        <Route path='/saved' element={<SavedEvents events={savedEvents} />}/>
+
+          <Route exact path='/' element= {(loading) ? 
+            <h1>Loading...</h1> : 
+            <Events events={events}/>}
+          />
+
+          <Route exact path='/events/:eventID' element={<EventView saveEvent={addSavedEvent}/>}/>
+
+          <Route exact path='/saved' element={<SavedEvents events={savedEvents} />}/>
+
+          <Route path='/*' element={<Error />}/>
+
       </Routes>
     </div>
   );

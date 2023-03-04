@@ -11,7 +11,7 @@ const EventView = ({saveEvent}) => {
   const [error, setError] = useState('');
 
   const location = useLocation();
-  const event_id = location.pathname.slice(1);
+  const event_id = location.pathname.slice(8);
 
   const handleClick = (event) => {
     event.preventDefault()
