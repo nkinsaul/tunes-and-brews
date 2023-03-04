@@ -40,6 +40,7 @@ const EventView = () => {
                 ${Math.round(_event.priceRanges[0].max)}
               </p>}
               <a href={`${_event.url}`}>Buy Tickets</a>
+              <button className="save-button">Save Event</button>
              </div>
           </div>
           <img className='event-image' src={image.url} />

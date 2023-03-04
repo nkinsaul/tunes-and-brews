@@ -13,6 +13,11 @@
   flex-direction: column;
 }
 
+.event-ticket-details {
+  display: flex;
+  flex-direction: column;
+}
+
 .event-text {
   padding: 2%;
   border-top: 1px solid black;
