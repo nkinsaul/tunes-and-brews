@@ -15,7 +15,9 @@ const App = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
-  const addSavedEvent = (savedEvent) => {
+  const addSavedEvent = (savedEventId) => {
+    const savedEvent = events.find(_event =>
+      _event.id === savedEventId)
     setSavedEvents(prevSavedEvents => 
       [...prevSavedEvents, savedEvent])
   }
@@ -34,7 +36,7 @@ const App = () => {
           <h1>Loading...</h1> : 
           <Events events={events}/>}/>
         <Route path='/:eventID' element={<EventView saveEvent={addSavedEvent}/>}/>
-        <Route path='/saved' element={<Events events={savedEvents} />}/>
+        <Route path='/saved' element={<SavedEvents events={savedEvents} />}/>
       </Routes>
     </div>
   );
