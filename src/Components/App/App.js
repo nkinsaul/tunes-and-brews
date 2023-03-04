@@ -43,12 +43,6 @@ const App = () => {
     getCleanEvents()
   },[])
 
-  // useEffect(() => {
-  //   getEvents()
-  //   .then((data) => {return setEvents(data._embedded.events), setLoading(false)})
-  //   .catch(setError(error))
-  // },[])
-
   return (
     <div className="app">
       <Header />

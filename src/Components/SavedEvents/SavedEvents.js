@@ -12,11 +12,10 @@ const SavedEvents = ({events}) => {
             <EventCard 
               key={_event.id}
               id={_event.id}
-              image={_event.images.find(image => 
-                image.ratio === '3_2' && image.width === 640)}
+              image={_event.image}
               name={_event.name}
-              venue={_event._embedded.venues[0].name}
-              date={_event.dates.start.dateTime}
+              venue={_event.venue}
+              date={_event.date}
             />)}
         </div>
       </div>  

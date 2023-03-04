@@ -11,7 +11,7 @@ const Events = ({events}) => {
   const updateSearch = (keyword) => {
     const filteredEvents = events.filter(_event => 
       _event.name.toLowerCase().includes(keyword) || 
-      _event._embedded.venues[0].name.toLowerCase().includes(keyword))
+      _event.venue.toLowerCase().includes(keyword))
     setFilteredEvents(filteredEvents)
   }
 
