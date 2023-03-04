@@ -8,7 +8,9 @@ const Events = ({events}) => {
   const [filteredEvents, setFilteredEvents] = useState([]);
 
   const updateSearch = (keyword) => {
-    const filteredEvents = events.filter(_event => _event.name.toLowerCase().includes(keyword) || _event._embedded.venues[0].name.toLowerCase().includes(keyword))
+    const filteredEvents = events.filter(_event => 
+      _event.name.toLowerCase().includes(keyword) || 
+      _event._embedded.venues[0].name.toLowerCase().includes(keyword))
     setFilteredEvents(filteredEvents)
   }
 
