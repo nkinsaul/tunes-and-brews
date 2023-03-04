@@ -12,8 +12,7 @@ export const getEvents = () => {
     } else {
       return response.json()
     }
-  }).then 
-  (data => console.log('clean events', cleanEvents(data._embedded.events)))
+  })
 }
 
 export const getEvent = (event_id) => {
@@ -22,7 +21,7 @@ export const getEvent = (event_id) => {
     if(!response.ok) {
       throw new Error(response.status)
     } else {
-      response.json()
+      return response.json()
     }
   })
 }

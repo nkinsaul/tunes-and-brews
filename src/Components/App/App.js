@@ -26,10 +26,21 @@ const App = () => {
     }
   }
 
+  const getCleanEvents = async () => {
+    const events = getEvents()
+  
+  try {
+    const eventsData = await events
+    const cleanedEventsData = await cleanEvents(eventsData._embedded.events)
+    setEvents(cleanedEventsData)
+    setLoading(false)
+    } catch(error) {
+      setError(error.message)
+    }
+  } 
+
   useEffect(() => {
-    getEvents()
-    .then((data) => {return setEvents(data), setLoading(false)})
-    .catch(setError(error))
+    getCleanEvents()
   },[])
 
   // useEffect(() => {
