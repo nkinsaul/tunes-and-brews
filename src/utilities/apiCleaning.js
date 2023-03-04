@@ -9,7 +9,7 @@ export const cleanEvents = (events) => {
       image: _event.images.find(image => 
           image.ratio === '3_2' && image.width === 640),
       venue: _event._embedded.venues[0].name,
-      date: new Date(_event.dates.start.dateTime)
+      date: new Date(_event.dates.start.localDate)
     }
   })
   const sortedEvents = cleanedEvents.sort((a, b) => {

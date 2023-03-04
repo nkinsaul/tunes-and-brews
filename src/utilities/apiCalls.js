@@ -1,4 +1,3 @@
-import { cleanEvents } from "./apiCleaning"
 
 const ticketMasterKey = process.env.REACT_APP_TICKETMASTERKEY
 const beerMappingKey = process.env.REACT_APP_BEERMAPPING
