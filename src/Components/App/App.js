@@ -28,9 +28,15 @@ const App = () => {
 
   useEffect(() => {
     getEvents()
-    .then((data) => {return setEvents(data._embedded.events), setLoading(false)})
+    .then((data) => {return setEvents(data), setLoading(false)})
     .catch(setError(error))
   },[])
+
+  // useEffect(() => {
+  //   getEvents()
+  //   .then((data) => {return setEvents(data._embedded.events), setLoading(false)})
+  //   .catch(setError(error))
+  // },[])
 
   return (
     <div className="app">

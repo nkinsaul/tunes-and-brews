@@ -1,6 +1,8 @@
+import { cleanEvents } from "./apiCleaning"
 
 const ticketMasterKey = process.env.REACT_APP_TICKETMASTERKEY
 const beerMappingKey = process.env.REACT_APP_BEERMAPPING
+
 
 export const getEvents = () => {
   return fetch(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=385&apikey=${ticketMasterKey}`)
@@ -10,7 +12,8 @@ export const getEvents = () => {
     } else {
       return response.json()
     }
-  })
+  }).then 
+  (data => console.log('clean events', cleanEvents(data._embedded.events)))
 }
 
 export const getEvent = (event_id) => {
@@ -19,7 +22,7 @@ export const getEvent = (event_id) => {
     if(!response.ok) {
       throw new Error(response.status)
     } else {
-      return response.json()
+      response.json()
     }
   })
 }
