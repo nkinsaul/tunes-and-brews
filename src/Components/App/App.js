@@ -7,6 +7,7 @@ import Events from '../Events/Events';
 import SavedEvents from '../SavedEvents/SavedEvents';
 import { useState, useEffect } from 'react';
 import { getEvents } from '../../utilities/apiCalls';
+import { cleanEvents } from '../../utilities/apiCleaning';
 
 const App = () => {
 
