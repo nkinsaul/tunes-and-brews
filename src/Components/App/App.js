@@ -11,8 +11,14 @@ import { getEvents } from '../../utilities/apiCalls';
 const App = () => {
 
   const [events, setEvents] = useState([])
+  const [savedEvents, setSavedEvents] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
+
+  const addSavedEvent = (savedEvent) => {
+    setSavedEvents(prevSavedEvents => 
+      [...prevSavedEvents, savedEvent])
+  }
 
   useEffect(() => {
     getEvents()
@@ -27,8 +33,8 @@ const App = () => {
         <Route path='/events' element= {(loading) ? 
           <h1>Loading...</h1> : 
           <Events events={events}/>}/>
-        <Route path='/:eventID' element={<EventView />}/>
-        <Route path='/saved' element={<SavedEvents />}/>
+        <Route path='/:eventID' element={<EventView saveEvent={addSavedEvent}/>}/>
+        <Route path='/saved' element={<Events events={savedEvents} />}/>
       </Routes>
     </div>
   );

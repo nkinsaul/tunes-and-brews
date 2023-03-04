@@ -5,13 +5,18 @@ import { getEvent } from "../../utilities/apiCalls";
 import dayjs from "dayjs";
 import Breweries from "../Breweries/Breweries";
 
-const EventView = () => {
+const EventView = ({saveEvent}) => {
   const [_event, setEvent] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   const location = useLocation();
   const event_id = location.pathname.slice(1);
+
+  const handleClick = (event) => {
+    event.preventDefault()
+    saveEvent(event.target.id)
+  }
 
   useEffect(() => {
     getEvent(event_id)
@@ -40,7 +45,7 @@ const EventView = () => {
                 ${Math.round(_event.priceRanges[0].max)}
               </p>}
               <a href={`${_event.url}`}>Buy Tickets</a>
-              <button className="save-button">Save Event</button>
+              <button id={_event.id} onClick={(e) => handleClick(e)} className="save-button">Save Event</button>
              </div>
           </div>
           <img className='event-image' src={image.url} />

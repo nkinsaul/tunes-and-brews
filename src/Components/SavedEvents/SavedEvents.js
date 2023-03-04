@@ -1,7 +1,7 @@
-import React from "react";
+import React,{useState} from "react";
 import './SavedEvents.css'
 
-const SavedEvents = () => {
+const SavedEvents = ({events}) => {
   return (
     <h1>Saved Events</h1>
   )
