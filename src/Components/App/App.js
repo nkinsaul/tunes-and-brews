@@ -18,8 +18,11 @@ const App = () => {
   const addSavedEvent = (savedEventId) => {
     const savedEvent = events.find(_event =>
       _event.id === savedEventId)
-    setSavedEvents(prevSavedEvents => 
-      [...prevSavedEvents, savedEvent])
+    
+    if(!savedEvents.includes(savedEvent)) {
+      setSavedEvents(prevSavedEvents => 
+        [...prevSavedEvents, savedEvent])
+    }
   }
 
   useEffect(() => {
