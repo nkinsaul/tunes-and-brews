@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import PropTypes from 'prop-types';
 import { getBreweries } from "../../utilities/apiCalls";
 import './Breweries.css'
 
@@ -38,3 +39,8 @@ const Breweries = ({postalCode, city}) => {
 }
 
 export default Breweries
+
+Breweries.propTypes = {
+  postalCode: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired
+}
