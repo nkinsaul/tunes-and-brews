@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import PropTypes from 'prop-types';
 import './SearchForm.css'
 
 const SearchForm = ({updateSearch}) => {
@@ -24,3 +25,7 @@ const SearchForm = ({updateSearch}) => {
 }
 
 export default SearchForm
+
+SearchForm.propTypes = {
+  updateSearch: PropTypes.func.isRequired
+}

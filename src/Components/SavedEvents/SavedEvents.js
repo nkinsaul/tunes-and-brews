@@ -1,4 +1,5 @@
-
+import React from 'react';
+import PropTypes from 'prop-types'
 import './SavedEvents.css'
 import EventCard from "../EventCard/EventCard";
 
@@ -7,7 +8,6 @@ const SavedEvents = ({events, removeSavedEvent}) => {
   const handleClick = (id) => {
     removeSavedEvent(id)
   }
-
 
   return (
     <>
@@ -37,3 +37,8 @@ const SavedEvents = ({events, removeSavedEvent}) => {
 }
 
 export default SavedEvents
+
+SavedEvents.propTypes = {
+  events: PropTypes.array.isRequired,
+  removeSavedEvent: PropTypes.func.isRequired
+}

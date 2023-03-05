@@ -1,7 +1,7 @@
 
 import './App.css';
 import Header from '../Header/Header';
-import {Route, Routes, Navigate} from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import EventView from '../EventView/EventView';
 import Events from '../Events/Events';
 import SavedEvents from '../SavedEvents/SavedEvents';
@@ -32,7 +32,6 @@ const App = () => {
     const filteredEvents = savedEvents.filter(_event => {
       return _event.id !== savedEventId
     })
-    console.log(filteredEvents)
     setSavedEvents(filteredEvents)
   }
 
