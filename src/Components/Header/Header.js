@@ -6,9 +6,9 @@ const Header = () => {
 
   return (
     <div className="header">
-      <Link className="link" to='/'>Home</Link>
-      <h1 className="app-name">Brew Beats</h1>
-      <Link className="link" to='/saved'>Saved</Link>
+      <Link data-cy="home-link" className="link" to='/'>Home</Link>
+      <h1 className="app-name" data-cy="app-name">Brew Beats</h1>
+      <Link data-cy="saved-link" className="link" to='/saved'>Saved</Link>
     </div>
   )
 }
