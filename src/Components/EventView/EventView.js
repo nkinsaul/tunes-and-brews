@@ -50,7 +50,7 @@ const EventView = ({saveEvent}) => {
               <button id={_event.id} onClick={(e) => handleClick(e)} className="save-button">Save Event</button>
              </div>
           </div>
-          <img className='event-image' src={image.url} />
+          <img data-cy={`${_event.id}-single-view`}className='event-image' src={image.url} />
         </div>
         <div className="breweries-container">
           <Breweries 

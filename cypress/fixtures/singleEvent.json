@@ -1,0 +1,592 @@
+{
+  "name": "Shania Twain: Queen Of Me Tour",
+  "type": "event",
+  "id": "vvG1HZ94ivZAwx",
+  "test": false,
+  "url": "https://ticketswestinw.evenue.net/cgi-bin/ncommerce3/SEGetEventList?groupCode=ARNST&linkID=twcorp",
+  "locale": "en-us",
+  "images": [
+      {
+          "ratio": "3_2",
+          "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_RETINA_PORTRAIT_3_2.jpg",
+          "width": 640,
+          "height": 427,
+          "fallback": false
+      },
+      {
+          "ratio": "16_9",
+          "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_EVENT_DETAIL_PAGE_16_9.jpg",
+          "width": 205,
+          "height": 115,
+          "fallback": false
+      },
+      {
+          "ratio": "16_9",
+          "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_RETINA_LANDSCAPE_16_9.jpg",
+          "width": 1136,
+          "height": 639,
+          "fallback": false
+      },
+      {
+          "ratio": "16_9",
+          "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_TABLET_LANDSCAPE_16_9.jpg",
+          "width": 1024,
+          "height": 576,
+          "fallback": false
+      },
+      {
+          "ratio": "16_9",
+          "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_RECOMENDATION_16_9.jpg",
+          "width": 100,
+          "height": 56,
+          "fallback": false
+      },
+      {
+          "ratio": "3_2",
+          "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_TABLET_LANDSCAPE_3_2.jpg",
+          "width": 1024,
+          "height": 683,
+          "fallback": false
+      },
+      {
+          "ratio": "16_9",
+          "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+          "width": 2048,
+          "height": 1152,
+          "fallback": false
+      },
+      {
+          "ratio": "4_3",
+          "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_CUSTOM.jpg",
+          "width": 305,
+          "height": 225,
+          "fallback": false
+      },
+      {
+          "ratio": "16_9",
+          "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_RETINA_PORTRAIT_16_9.jpg",
+          "width": 640,
+          "height": 360,
+          "fallback": false
+      },
+      {
+          "ratio": "3_2",
+          "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_ARTIST_PAGE_3_2.jpg",
+          "width": 305,
+          "height": 203,
+          "fallback": false
+      }
+  ],
+  "sales": {
+      "public": {
+          "startDateTime": "2022-11-04T17:00:00Z",
+          "startTBD": false,
+          "startTBA": false,
+          "endDateTime": "2023-04-29T02:30:00Z"
+      },
+      "presales": [
+          {
+              "startDateTime": "2022-11-01T17:00:00Z",
+              "endDateTime": "2022-11-04T05:00:00Z",
+              "name": "CITI Cardmember Presale"
+          },
+          {
+              "startDateTime": "2022-11-03T17:00:00Z",
+              "endDateTime": "2022-11-04T05:00:00Z",
+              "name": "Live Nation Presale"
+          }
+      ]
+  },
+  "dates": {
+      "start": {
+          "localDate": "2023-04-28",
+          "localTime": "19:30:00",
+          "dateTime": "2023-04-29T02:30:00Z",
+          "dateTBD": false,
+          "dateTBA": false,
+          "timeTBA": false,
+          "noSpecificTime": false
+      },
+      "timezone": "America/Los_Angeles",
+      "status": {
+          "code": "onsale"
+      },
+      "spanMultipleDays": false
+  },
+  "classifications": [
+      {
+          "primary": true,
+          "segment": {
+              "id": "KZFzniwnSyZfZ7v7nJ",
+              "name": "Music"
+          },
+          "genre": {
+              "id": "KnvZfZ7vAv6",
+              "name": "Country"
+          },
+          "subGenre": {
+              "id": "KZazBEonSMnZfZ7vAFa",
+              "name": "Country"
+          },
+          "type": {
+              "id": "KZAyXgnZfZ7v7nI",
+              "name": "Undefined"
+          },
+          "subType": {
+              "id": "KZFzBErXgnZfZ7v7lJ",
+              "name": "Undefined"
+          },
+          "family": false
+      }
+  ],
+  "promoter": {
+      "id": "653",
+      "name": "LIVE NATION MUSIC",
+      "description": "LIVE NATION MUSIC / NTL / USA"
+  },
+  "promoters": [
+      {
+          "id": "653",
+          "name": "LIVE NATION MUSIC",
+          "description": "LIVE NATION MUSIC / NTL / USA"
+      },
+      {
+          "id": "4576",
+          "name": "LIVE NATION 3PE EVENT",
+          "description": "LIVE NATION 3PE EVENT / NTL / USA"
+      }
+  ],
+  "accessibility": {},
+  "ageRestrictions": {
+      "legalAgeEnforced": false
+  },
+  "ticketing": {
+      "safeTix": {
+          "enabled": false
+      }
+  },
+  "_links": {
+      "self": {
+          "href": "/discovery/v2/events/vvG1HZ94ivZAwx?locale=en-us"
+      },
+      "attractions": [
+          {
+              "href": "/discovery/v2/attractions/K8vZ91719n0?locale=en-us"
+          },
+          {
+              "href": "/discovery/v2/attractions/K8vZ9172-p0?locale=en-us"
+          }
+      ],
+      "venues": [
+          {
+              "href": "/discovery/v2/venues/KovZpZA1eklA?locale=en-us"
+          }
+      ]
+  },
+  "_embedded": {
+      "venues": [
+          {
+              "name": "Spokane Arena",
+              "type": "venue",
+              "id": "KovZpZA1eklA",
+              "test": false,
+              "url": "https://www.ticketmaster.com/spokane-arena-tickets-spokane/venue/123682",
+              "locale": "en-us",
+              "postalCode": "99201",
+              "timezone": "America/Los_Angeles",
+              "city": {
+                  "name": "Spokane"
+              },
+              "state": {
+                  "name": "Washington",
+                  "stateCode": "WA"
+              },
+              "country": {
+                  "name": "United States Of America",
+                  "countryCode": "US"
+              },
+              "address": {
+                  "line1": "720 West Mallon Ave"
+              },
+              "location": {
+                  "longitude": "-117.4225336",
+                  "latitude": "47.6653257"
+              },
+              "markets": [
+                  {
+                      "name": "Seattle Area",
+                      "id": "42"
+                  }
+              ],
+              "dmas": [
+                  {
+                      "id": 385
+                  },
+                  {
+                      "id": 391
+                  },
+                  {
+                      "id": 418
+                  }
+              ],
+              "boxOfficeInfo": {
+                  "phoneNumberDetail": "509-324-7000",
+                  "openHoursDetail": "Monday to Friday 10:00am to 6:00pm.",
+                  "acceptedPaymentDetail": "Cash, Visa, Mastercard, American Express, Checks & Discover card.",
+                  "willCallDetail": "Box office opens 2 hours prior to showtime. All customers must show a valid I.D. to pickup Will Call Tickets."
+              },
+              "parkingDetail": "There are 40 accessible parking stalls for cars and vans located in the Parking Lot B near the Northeast Main Arena entrance. Anyone using these spaces must display an official state disabled parking permit or license place. There are additional accessible spaces in Lot F south of the Spokane Arena. There are passenger loading zones on Howard Street that serve both the Event and Concourse Levels. There are 7 parking lots for patrons to use.",
+              "accessibleSeatingDetail": "Contact Spokane Arena for Accessible Seating at 509-324-7000.",
+              "generalInfo": {
+                  "childRule": "Everyone must have a Ticket to gain entrance to this building."
+              },
+              "upcomingEvents": {
+                  "_total": 21,
+                  "tmr": 17,
+                  "ticketmaster": 4,
+                  "_filtered": 0
+              },
+              "_links": {
+                  "self": {
+                      "href": "/discovery/v2/venues/KovZpZA1eklA?locale=en-us"
+                  }
+              }
+          }
+      ],
+      "attractions": [
+          {
+              "name": "Shania Twain",
+              "type": "attraction",
+              "id": "K8vZ91719n0",
+              "test": false,
+              "url": "https://www.ticketmaster.com.au/shania-twain-tickets/artist/764367",
+              "locale": "en-us",
+              "externalLinks": {
+                  "youtube": [
+                      {
+                          "url": "https://www.youtube.com/user/ShaniaTwain"
+                      }
+                  ],
+                  "twitter": [
+                      {
+                          "url": "https://twitter.com/FollowShania"
+                      }
+                  ],
+                  "itunes": [
+                      {
+                          "url": "https://music.apple.com/us/artist/shania-twain/129974"
+                      }
+                  ],
+                  "lastfm": [
+                      {
+                          "url": "http://www.last.fm/music/Shania+Twain"
+                      }
+                  ],
+                  "facebook": [
+                      {
+                          "url": "https://www.facebook.com/ShaniaTwain"
+                      }
+                  ],
+                  "wiki": [
+                      {
+                          "url": "https://en.wikipedia.org/wiki/Shania_Twain"
+                      }
+                  ],
+                  "spotify": [
+                      {
+                          "url": "https://open.spotify.com/artist/5e4Dhzv426EvQe3aDb64jL"
+                      }
+                  ],
+                  "musicbrainz": [
+                      {
+                          "id": "faabb55d-3c9e-4c23-8779-732ac2ee2c0d"
+                      }
+                  ],
+                  "instagram": [
+                      {
+                          "url": "https://www.instagram.com/shaniatwain/"
+                      }
+                  ],
+                  "homepage": [
+                      {
+                          "url": "http://www.shaniatwain.com/"
+                      }
+                  ]
+              },
+              "aliases": [
+                  "shaina twain",
+                  "shania twain",
+                  "shinia twain"
+              ],
+              "images": [
+                  {
+                      "ratio": "3_2",
+                      "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_RETINA_PORTRAIT_3_2.jpg",
+                      "width": 640,
+                      "height": 427,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "16_9",
+                      "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_EVENT_DETAIL_PAGE_16_9.jpg",
+                      "width": 205,
+                      "height": 115,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "16_9",
+                      "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_RETINA_LANDSCAPE_16_9.jpg",
+                      "width": 1136,
+                      "height": 639,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "16_9",
+                      "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_TABLET_LANDSCAPE_16_9.jpg",
+                      "width": 1024,
+                      "height": 576,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "16_9",
+                      "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_RECOMENDATION_16_9.jpg",
+                      "width": 100,
+                      "height": 56,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "3_2",
+                      "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_TABLET_LANDSCAPE_3_2.jpg",
+                      "width": 1024,
+                      "height": 683,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "16_9",
+                      "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+                      "width": 2048,
+                      "height": 1152,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "4_3",
+                      "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_CUSTOM.jpg",
+                      "width": 305,
+                      "height": 225,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "16_9",
+                      "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_RETINA_PORTRAIT_16_9.jpg",
+                      "width": 640,
+                      "height": 360,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "3_2",
+                      "url": "https://s1.ticketm.net/dam/a/1d1/47cc9b10-4904-4dec-b1d6-539e44a521d1_1825531_ARTIST_PAGE_3_2.jpg",
+                      "width": 305,
+                      "height": 203,
+                      "fallback": false
+                  }
+              ],
+              "classifications": [
+                  {
+                      "primary": true,
+                      "segment": {
+                          "id": "KZFzniwnSyZfZ7v7nJ",
+                          "name": "Music"
+                      },
+                      "genre": {
+                          "id": "KnvZfZ7vAv6",
+                          "name": "Country"
+                      },
+                      "subGenre": {
+                          "id": "KZazBEonSMnZfZ7vAFa",
+                          "name": "Country"
+                      },
+                      "type": {
+                          "id": "KZAyXgnZfZ7v7nI",
+                          "name": "Undefined"
+                      },
+                      "subType": {
+                          "id": "KZFzBErXgnZfZ7v7lJ",
+                          "name": "Undefined"
+                      },
+                      "family": false
+                  }
+              ],
+              "upcomingEvents": {
+                  "_total": 86,
+                  "tmr": 5,
+                  "ticketmaster": 81,
+                  "_filtered": 0
+              },
+              "_links": {
+                  "self": {
+                      "href": "/discovery/v2/attractions/K8vZ91719n0?locale=en-us"
+                  }
+              }
+          },
+          {
+              "name": "Lindsay Ell",
+              "type": "attraction",
+              "id": "K8vZ9172-p0",
+              "test": false,
+              "url": "https://www.ticketmaster.com.au/lindsay-ell-tickets/artist/1700267",
+              "locale": "en-us",
+              "externalLinks": {
+                  "youtube": [
+                      {
+                          "url": "https://www.youtube.com/user/lindsayell"
+                      }
+                  ],
+                  "twitter": [
+                      {
+                          "url": "https://twitter.com/lindsayell"
+                      }
+                  ],
+                  "itunes": [
+                      {
+                          "url": "https://music.apple.com/us/artist/lindsay-ell/309273947"
+                      }
+                  ],
+                  "spotify": [
+                      {
+                          "url": "https://open.spotify.com/artist/4lpA7MWpQpY7hKkwfLxw2Q"
+                      }
+                  ],
+                  "facebook": [
+                      {
+                          "url": "https://www.facebook.com/officiallindsayell/"
+                      }
+                  ],
+                  "musicbrainz": [
+                      {
+                          "id": "735f2b10-a267-4cd2-990f-f91702be9130"
+                      }
+                  ],
+                  "instagram": [
+                      {
+                          "url": "https://www.instagram.com/lindsayell/"
+                      }
+                  ],
+                  "homepage": [
+                      {
+                          "url": "https://www.lindsayell.com/welcome/"
+                      }
+                  ]
+              },
+              "images": [
+                  {
+                      "ratio": "16_9",
+                      "url": "https://s1.ticketm.net/dam/a/445/164e5f67-1fdb-49a9-a969-2e51713ff445_1404751_TABLET_LANDSCAPE_16_9.jpg",
+                      "width": 1024,
+                      "height": 576,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "16_9",
+                      "url": "https://s1.ticketm.net/dam/a/445/164e5f67-1fdb-49a9-a969-2e51713ff445_1404751_RETINA_PORTRAIT_16_9.jpg",
+                      "width": 640,
+                      "height": 360,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "16_9",
+                      "url": "https://s1.ticketm.net/dam/a/445/164e5f67-1fdb-49a9-a969-2e51713ff445_1404751_EVENT_DETAIL_PAGE_16_9.jpg",
+                      "width": 205,
+                      "height": 115,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "3_2",
+                      "url": "https://s1.ticketm.net/dam/a/445/164e5f67-1fdb-49a9-a969-2e51713ff445_1404751_TABLET_LANDSCAPE_3_2.jpg",
+                      "width": 1024,
+                      "height": 683,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "16_9",
+                      "url": "https://s1.ticketm.net/dam/a/445/164e5f67-1fdb-49a9-a969-2e51713ff445_1404751_RETINA_LANDSCAPE_16_9.jpg",
+                      "width": 1136,
+                      "height": 639,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "4_3",
+                      "url": "https://s1.ticketm.net/dam/a/445/164e5f67-1fdb-49a9-a969-2e51713ff445_1404751_CUSTOM.jpg",
+                      "width": 305,
+                      "height": 225,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "16_9",
+                      "url": "https://s1.ticketm.net/dam/a/445/164e5f67-1fdb-49a9-a969-2e51713ff445_1404751_RECOMENDATION_16_9.jpg",
+                      "width": 100,
+                      "height": 56,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "16_9",
+                      "url": "https://s1.ticketm.net/dam/a/445/164e5f67-1fdb-49a9-a969-2e51713ff445_1404751_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+                      "width": 2048,
+                      "height": 1152,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "3_2",
+                      "url": "https://s1.ticketm.net/dam/a/445/164e5f67-1fdb-49a9-a969-2e51713ff445_1404751_ARTIST_PAGE_3_2.jpg",
+                      "width": 305,
+                      "height": 203,
+                      "fallback": false
+                  },
+                  {
+                      "ratio": "3_2",
+                      "url": "https://s1.ticketm.net/dam/a/445/164e5f67-1fdb-49a9-a969-2e51713ff445_1404751_RETINA_PORTRAIT_3_2.jpg",
+                      "width": 640,
+                      "height": 427,
+                      "fallback": false
+                  }
+              ],
+              "classifications": [
+                  {
+                      "primary": true,
+                      "segment": {
+                          "id": "KZFzniwnSyZfZ7v7nJ",
+                          "name": "Music"
+                      },
+                      "genre": {
+                          "id": "KnvZfZ7vAv6",
+                          "name": "Country"
+                      },
+                      "subGenre": {
+                          "id": "KZazBEonSMnZfZ7vAFa",
+                          "name": "Country"
+                      },
+                      "type": {
+                          "id": "KZAyXgnZfZ7v7nI",
+                          "name": "Undefined"
+                      },
+                      "subType": {
+                          "id": "KZFzBErXgnZfZ7v7lJ",
+                          "name": "Undefined"
+                      },
+                      "family": false
+                  }
+              ],
+              "upcomingEvents": {
+                  "_total": 17,
+                  "tmr": 2,
+                  "ticketmaster": 15,
+                  "_filtered": 0
+              },
+              "_links": {
+                  "self": {
+                      "href": "/discovery/v2/attractions/K8vZ9172-p0?locale=en-us"
+                  }
+              }
+          }
+      ]
+  }
+}

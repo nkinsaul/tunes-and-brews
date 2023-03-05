@@ -1,7 +1,8 @@
+
 describe('Dashboard flows', () => {
   beforeEach(() => {
 
-    cy.intercept('GET', 'https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=385&', {fixture: "events.json" })
+    cy.intercept("GET", 'https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=385&apikey=GsEb44ExGWUeR5lOEg7Tugd2PdKAnKWl', {fixture: "mock.json"})
 
     cy.visit('http://localhost:3000/') 
   })
@@ -25,7 +26,6 @@ describe('Dashboard flows', () => {
   it('User should see more details about an event after clicking', () => {
     cy.get('[data-cy=vvG1HZ94ivZAwx]').click()
     cy.get('[data-cy=vvG1HZ94ivZAwx-details]').should('be.visible')
-    
   })
 
 })
