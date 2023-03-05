@@ -32,7 +32,7 @@ const EventView = ({saveEvent}) => {
       {
       (newError) ? <Navigate to='/*' /> :
       (loading) ? <h1>Loading...</h1> :
-      <div className="event-view-container">
+      <div data-cy={`${_event.id}-details`} className="event-view-container">
         <div className="event-details">
           <div className="event-text">
             <div className="event-headers">

@@ -33,6 +33,7 @@ const App = () => {
   
   try {
     const eventsData = await events
+    console.log(eventsData)
     const cleanedEventsData = await cleanEvents(eventsData._embedded.events)
     setEvents(cleanedEventsData)
     setLoading(false)
