@@ -1,7 +1,7 @@
 
 import './App.css';
 import Header from '../Header/Header';
-import {Route, Routes} from 'react-router-dom'
+import {Route, Routes, Navigate} from 'react-router-dom'
 import EventView from '../EventView/EventView';
 import Events from '../Events/Events';
 import SavedEvents from '../SavedEvents/SavedEvents';
@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 import { getEvents } from '../../utilities/apiCalls';
 import { cleanEvents } from '../../utilities/apiCleaning';
 import Error from '../Errors/Errors';
+import ServerError from '../Errors/ServerError';
 
 const App = () => {
 
@@ -36,7 +37,7 @@ const App = () => {
     setEvents(cleanedEventsData)
     setLoading(false)
     } catch(error) {
-      setError(error.message)
+      setError(true)
     }
   } 
 
@@ -49,14 +50,17 @@ const App = () => {
       <Header />
       <Routes>
 
-          <Route exact path='/' element= {(loading) ? 
-            <h1>Loading...</h1> : 
+          <Route exact path='/' element= {
+            (error) ? <Navigate to='./server-error' /> :
+            (loading) ? <h1>Loading...</h1> : 
             <Events events={events}/>}
           />
 
           <Route exact path='/events/:eventID' element={<EventView saveEvent={addSavedEvent}/>}/>
 
           <Route exact path='/saved' element={<SavedEvents events={savedEvents} />}/>
+
+          <Route exact path='/server-error' element={<ServerError />}/>
 
           <Route path='/*' element={<Error />}/>
 

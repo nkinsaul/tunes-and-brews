@@ -1,3 +1,4 @@
+import { redirect } from "react-router-dom"
 
 const ticketMasterKey = process.env.REACT_APP_TICKETMASTERKEY
 const beerMappingKey = process.env.REACT_APP_BEERMAPPING
@@ -11,7 +12,7 @@ export const getEvents = () => {
     } else {
       return response.json()
     }
-  })
+  }).catch(() => redirect('/server-error'))
 }
 
 export const getEvent = (event_id) => {

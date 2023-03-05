@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { useLocation, redirect, Navigate } from "react-router-dom";
+import { useLocation, Navigate } from "react-router-dom";
 import './EventView.css';
 import { getEvent } from "../../utilities/apiCalls";
 import dayjs from "dayjs";
