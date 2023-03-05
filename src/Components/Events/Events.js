@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import PropTypes from 'prop-types';
 import './Events.css'
 import EventCard from "../EventCard/EventCard";
 import SearchForm from "../SearchForm/SearchForm";
@@ -39,3 +40,7 @@ const Events = ({events}) => {
 }
 
 export default Events
+
+Events.propTypes = {
+  events: PropTypes.array.isRequired
+}
