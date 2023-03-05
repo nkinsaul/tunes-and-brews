@@ -10,6 +10,7 @@ const EventView = ({saveEvent}) => {
   const [_event, setEvent] = useState({});
   const [loading, setLoading] = useState(true);
   const [newError, setError] = useState(false);
+  const [saved, setSaved] = useState(false)
 
   const location = useLocation();
   const event_id = location.pathname.slice(8);
@@ -17,6 +18,7 @@ const EventView = ({saveEvent}) => {
   const handleClick = (event) => {
     event.preventDefault()
     saveEvent(event.target.id)
+    setSaved(true)
   }
 
   useEffect(() => {
@@ -39,6 +41,7 @@ const EventView = ({saveEvent}) => {
             <div className="event-headers">
               <h1 className="element">{_event.name}</h1>
               <h2 className="element">{_event._embedded.venues[0].name}</h2>
+              {(saved) && <p>Saved to your events!</p>}
             </div>
             <div className="event-ticket-details">
               <p className="element">{dayjs(_event.dates.start.dateTime).format('MMM DD, YYYY')}</p>
