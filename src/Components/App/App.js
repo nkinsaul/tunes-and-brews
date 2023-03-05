@@ -32,7 +32,6 @@ const App = () => {
     const filteredEvents = savedEvents.filter(_event => {
       return _event.id !== savedEventId
     })
-    console.log(filteredEvents)
     setSavedEvents(filteredEvents)
   }
 
