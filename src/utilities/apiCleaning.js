@@ -17,6 +17,7 @@ export const cleanEvents = (events) => {
   })
   sortedEvents.forEach(_event => {
     _event.date = dayjs(_event.date).format('MMM DD, YYYY')
+    _event.image = _event.image.url
   })
   return sortedEvents
 }
