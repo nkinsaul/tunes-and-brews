@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Navigate, redirect } from "react-router-dom";
 import './EventView.css';
 import { getEvent } from "../../utilities/apiCalls";
 import dayjs from "dayjs";
@@ -8,10 +8,10 @@ import Breweries from "../Breweries/Breweries";
 const EventView = ({saveEvent}) => {
   const [_event, setEvent] = useState({});
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [newError, setError] = useState(false);
 
   const location = useLocation();
-  const event_id = location.pathname.slice(1);
+  const event_id = location.pathname.slice(8);
 
   const handleClick = (event) => {
     event.preventDefault()
@@ -21,7 +21,7 @@ const EventView = ({saveEvent}) => {
   useEffect(() => {
     getEvent(event_id)
     .then((data) => {return setEvent(data), setLoading(false)})
-    .catch(setError(error))
+    .catch(() =>  setError(true))
   }, [])
 
   const image = _event.images?.find(image => 
@@ -29,7 +29,9 @@ const EventView = ({saveEvent}) => {
 
   return (
     <>
-      {(loading) ? <h1>Loading...</h1> :
+      {
+      (newError) ? <Navigate to='/*' /> :
+      (loading) ? <h1>Loading...</h1> :
       <div className="event-view-container">
         <div className="event-details">
           <div className="event-text">

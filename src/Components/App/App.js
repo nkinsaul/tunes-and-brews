@@ -1,13 +1,15 @@
 
 import './App.css';
 import Header from '../Header/Header';
-import {Route, Routes} from 'react-router-dom'
+import {Route, Routes, Navigate} from 'react-router-dom'
 import EventView from '../EventView/EventView';
 import Events from '../Events/Events';
 import SavedEvents from '../SavedEvents/SavedEvents';
 import { useState, useEffect } from 'react';
 import { getEvents } from '../../utilities/apiCalls';
 import { cleanEvents } from '../../utilities/apiCleaning';
+import Error from '../Errors/Errors';
+import ServerError from '../Errors/ServerError';
 
 const App = () => {
 
@@ -31,12 +33,11 @@ const App = () => {
   
   try {
     const eventsData = await events
-    console.log('events data', eventsData)
     const cleanedEventsData = await cleanEvents(eventsData._embedded.events)
     setEvents(cleanedEventsData)
     setLoading(false)
     } catch(error) {
-      setError(error.message)
+      setError(true)
     }
   } 
 
@@ -48,11 +49,20 @@ const App = () => {
     <div className="app">
       <Header />
       <Routes>
-        <Route path='/events' element= {(loading) ? 
-          <h1>Loading...</h1> : 
-          <Events events={events}/>}/>
-        <Route path='/:eventID' element={<EventView saveEvent={addSavedEvent}/>}/>
-        <Route path='/saved' element={<SavedEvents events={savedEvents} />}/>
+
+          <Route exact path='/' element= {
+            (loading) ? <h1>Loading...</h1> : 
+            <Events events={events}/>}
+          />
+
+          <Route exact path='/events/:eventID' element={<EventView saveEvent={addSavedEvent}/>}/>
+
+          <Route exact path='/saved' element={<SavedEvents events={savedEvents} />}/>
+
+          <Route exact path='/server-error' element={<ServerError />}/>
+
+          <Route path='/*' element={<Error />}/>
+
       </Routes>
     </div>
   );
