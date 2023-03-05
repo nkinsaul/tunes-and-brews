@@ -28,6 +28,14 @@ const App = () => {
     }
   }
 
+  const removeSavedEvent = (savedEventId) => {
+    const filteredEvents = savedEvents.filter(_event => {
+      return _event.id !== savedEventId
+    })
+    console.log(filteredEvents)
+    setSavedEvents(filteredEvents)
+  }
+
   const getCleanEvents = async () => {
     const events = getEvents()
   
@@ -57,7 +65,7 @@ const App = () => {
 
           <Route exact path='/events/:eventID' element={<EventView saveEvent={addSavedEvent}/>}/>
 
-          <Route exact path='/saved' element={<SavedEvents events={savedEvents} />}/>
+          <Route exact path='/saved' element={<SavedEvents events={savedEvents} removeSavedEvent={removeSavedEvent}/>}/>
 
           <Route exact path='/server-error' element={<ServerError />}/>
 

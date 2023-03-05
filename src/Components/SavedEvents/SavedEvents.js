@@ -2,7 +2,11 @@
 import './SavedEvents.css'
 import EventCard from "../EventCard/EventCard";
 
-const SavedEvents = ({events}) => {
+const SavedEvents = ({events, removeSavedEvent}) => {
+
+  const handleClick = (id) => {
+    removeSavedEvent(id)
+  }
 
 
   return (
@@ -20,7 +24,11 @@ const SavedEvents = ({events}) => {
               venue={_event.venue}
               date={_event.date}
             />
-            <button id={_event.id} key={`${_event.id}-b`}>Remove from Saved Events</button>
+            <button 
+              onClick={(event) => handleClick(event.target.id)}
+              id={_event.id} 
+              key={`${_event.id}-b`}
+              >Remove from Saved Events</button>
           </div>)}
         </div>
       </div>  
