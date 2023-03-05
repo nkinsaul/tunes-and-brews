@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import './EventCard.css'
 import dayjs from "dayjs";
 import { Link } from "react-router-dom";
@@ -19,3 +20,11 @@ const EventCard = ({image, name, venue, date, id}) => {
 }
 
 export default EventCard
+
+EventCard.propTypes = { 
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  venue: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
+}
