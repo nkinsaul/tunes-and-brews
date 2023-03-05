@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { useLocation, Navigate } from "react-router-dom";
+import { useLocation, Navigate, redirect } from "react-router-dom";
 import './EventView.css';
 import { getEvent } from "../../utilities/apiCalls";
 import dayjs from "dayjs";
@@ -21,7 +21,7 @@ const EventView = ({saveEvent}) => {
   useEffect(() => {
     getEvent(event_id)
     .then((data) => {return setEvent(data), setLoading(false)})
-    .catch(() => setError(true))
+    .catch(() =>  setError(true))
   }, [])
 
   const image = _event.images?.find(image => 

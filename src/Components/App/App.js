@@ -51,7 +51,6 @@ const App = () => {
       <Routes>
 
           <Route exact path='/' element= {
-            (error) ? <Navigate to='./server-error' /> :
             (loading) ? <h1>Loading...</h1> : 
             <Events events={events}/>}
           />
