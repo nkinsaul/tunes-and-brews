@@ -20,6 +20,10 @@
 2. After determining one's desired installation location, open one's command line interpreter and run the following text into one's command line interpreter: `git clone git@github.com:nkinsaul/tunes-and-brews.git`
 3. Install NPM packages:
     1. Run `npm install` to install project dependencies.
+ 
+
+## Deployed
+- App is deployed at https://tunes-and-brews.vercel.app/
 
 ## Developers
 - [Natalie Kinsaul](https://github.com/nkinsaul)
