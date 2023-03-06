@@ -14,6 +14,7 @@ const SearchForm = ({updateSearch}) => {
       <h4>Search for Events</h4>
       <div className="inputs">
         <input 
+          data-cy="search"
           type='search'
           placeholder="Event or Venue Name"
           value={keyword}
