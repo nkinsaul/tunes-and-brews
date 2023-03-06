@@ -23,8 +23,17 @@ const EventView = ({saveEvent}) => {
 
   useEffect(() => {
     getEvent(event_id)
-    .then((data) => {return setEvent(data), setLoading(false)})
-    .catch(() =>  setError(true))
+    .then((data) => { 
+      if (data?.name === null) {
+      throw new Error('error')
+    } else {
+      setEvent(data)
+      setLoading(false)
+      setError(false)
+    }})
+    .catch(() =>  {
+      setError(true)
+      setLoading(false)})
   }, [])
 
   const image = _event.images?.find(image => 
@@ -32,8 +41,8 @@ const EventView = ({saveEvent}) => {
 
   const displayEvent = () => {
     let display;
-    (newError) ? display = <Navigate to ='/*' /> :
     (loading) ? display = <h1>Loading...</h1> :
+    (newError) ? display = <Navigate to ='/server-error' /> :
     display = (
       <div data-cy={`${_event.id}-details`} className="event-view-container">
         <div className="event-details">

@@ -11,7 +11,7 @@ export const getEvents = () => {
     } else {
       return response.json()
     }
-  }).catch(() => redirect('/server-error'))
+  }).catch((error) => error)
 }
 
 export const getEvent = (event_id) => {
@@ -22,7 +22,7 @@ export const getEvent = (event_id) => {
     } else {
       return response.json()
     }
-  })
+  }).catch((error) => error)
 }
 
 export const getBreweries = (city) => {
