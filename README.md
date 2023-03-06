@@ -1,4 +1,4 @@
-# Rancid Tomatillos
+# Brew Beats
 
 ## Table of Contents
 
