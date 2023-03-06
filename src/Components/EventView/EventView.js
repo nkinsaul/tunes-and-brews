@@ -30,11 +30,11 @@ const EventView = ({saveEvent}) => {
   const image = _event.images?.find(image => 
     image.ratio === '16_9' && image.width === 1024)
 
-  return (
-    <>
-      {
-      (newError) ? <Navigate to='/*' /> :
-      (loading) ? <h1>Loading...</h1> :
+  const displayEvents = () => {
+    let display;
+    (newError) ? display = <Navigate to ='/*' /> :
+    (loading) ? display = <h1>Loading...</h1> :
+    display = (
       <div data-cy={`${_event.id}-details`} className="event-view-container">
         <div className="event-details">
           <div className="event-text">
@@ -62,9 +62,17 @@ const EventView = ({saveEvent}) => {
             city={_event._embedded.venues[0].city.name.toLowerCase()}
           />
         </div>
-      </div>}
+      </div>
+    )
+      return display
+  }
+
+  return (
+    <>
+      {displayEvents()}
     </>
   )
+
 }
 
 export default EventView
