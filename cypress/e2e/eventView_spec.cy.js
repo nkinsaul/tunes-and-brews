@@ -32,6 +32,8 @@ it('User can save an event ', () => {
   cy.get('[data-cy=pop-saved]').should('be.visible')
 })
 
+//Bug with Cypress is throwing an error with the following tests that still needs troubleshooting
+
 // it('User can see events they have saved ', () => {
 //   cy.get('[data-cy=save]').click()
 //   cy.get('[data-cy=pop-saved]').should('be.visible')

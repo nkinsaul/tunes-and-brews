@@ -32,7 +32,7 @@ const SavedEvents = ({events, removeSavedEvent}) => {
 
   return (
     <>
-      <h1 className="saved-events-header">Your Events</h1>
+      <h1 data-cy="saved-header" className="saved-events-header">Your Events</h1>
       <div className="events-home">
         <div className="events-card-container">
           {savedEvents}
