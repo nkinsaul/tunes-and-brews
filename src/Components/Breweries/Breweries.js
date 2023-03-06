@@ -20,10 +20,10 @@ const Breweries = ({postalCode, city}) => {
 
   const nearbyBreweries = filteredBreweries?.map((brewery, index) => {
     return (
-      <div key={index} className="brewery">
-        <h3 className="brewE">{brewery.name}</h3>
-        <p className="brewE">{brewery.street}</p>
-        <a className="brew-link" href={`${brewery.reviewlink}`}>More Info</a>
+      <div id={index} key={index} className="brewery">
+        <h3 data-cy={`${index}-name`} className="brewE">{brewery.name}</h3>
+        <p data-cy={`${index}-street`} className="brewE">{brewery.street}</p>
+        <a data-cy={`${index}-link`} className="brew-link" href={`${brewery.reviewlink}`}>More Info</a>
       </div>
     )
   })

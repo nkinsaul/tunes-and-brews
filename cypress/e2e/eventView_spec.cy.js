@@ -8,9 +8,27 @@ describe('Event view flows', () => {
 
 
 it('User should see details about an event', () => {
-  // cy.get('[data-cy="vvG1HZ94ivZAwx-details"]').should('be.visible')
   cy.get('[data-cy=vvG1HZ94ivZAwx-details]').should('be.visible')
+  cy.get('[data-cy=name]').contains('Shania Twain: Queen Of Me Tour')
+  cy.get('[data-cy=venue]').contains('Spokane Arena')
+  cy.get('[data-cy=ticket]').should('be.visible')
+  cy.get('[data-cy=date]').contains('Apr 28, 2023')
+  cy.get('[data-cy=url]').should('be.visible')
+  cy.get('[data-cy=save]').should('be.visible')
+  cy.get('[data-cy=image]').should('be.visible')
 })
 
+it('User should see a list of breweries', () => {
+  cy.get('[data-cy=breweries]').should('be.visible')
+  cy.get('[data-cy=0-name]').should('be.visible')
+  cy.get('[data-cy=0-street]').should('be.visible')
+  cy.get('[data-cy=0-link]').should('be.visible')
+})
+
+it('User can save and remove an event from their saved events ', () => {
+  cy.get('[data-cy=save]').click()
+  cy.get('[data-cy=pop-saved]').should('be.visible')
+  cy.get('[data-cy=saved-link]').click()
+})
 
 })

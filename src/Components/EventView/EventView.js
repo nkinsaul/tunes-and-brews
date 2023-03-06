@@ -39,24 +39,24 @@ const EventView = ({saveEvent}) => {
         <div className="event-details">
           <div className="event-text">
             <div className="event-headers">
-              <h1 className="element">{_event.name}</h1>
-              <h2 className="element">{_event._embedded.venues[0].name}</h2>
-              {(saved) && <p>Saved to your events!</p>}
+              <h1 data-cy="name" className="element">{_event.name}</h1>
+              <h2 data-cy="venue" className="element">{_event._embedded.venues[0].name}</h2>
+              {(saved) && <p data-cy="pop-saved">Saved to your events!</p>}
             </div>
             <div className="event-ticket-details">
-              <p className="element">{dayjs(_event.dates.start.dateTime).format('MMM DD, YYYY')}</p>
-              {!_event.priceRanges ? <p>No ticket Data available</p> : 
-              <p className="element">Ticket price range: 
+              <p data-cy="date" className="element">{dayjs(_event.dates.start.dateTime).format('MMM DD, YYYY')}</p>
+              {!_event.priceRanges ? <p data-cy="ticket">No ticket Data available</p> : 
+              <p  className="element">Ticket price range: 
                 ${Math.round(_event.priceRanges[0].min)} - 
                 ${Math.round(_event.priceRanges[0].max)}
               </p>}
-              <a href={`${_event.url}`}>Buy Tickets</a>
-              <button id={_event.id} onClick={(e) => handleClick(e)} className="save-button">Save Event</button>
+              <a data-cy="url" href={`${_event.url}`}>Buy Tickets</a>
+              <button data-cy="save" id={_event.id} onClick={(e) => handleClick(e)} className="save-button">Save Event</button>
              </div>
           </div>
-          <img data-cy={`${_event.id}-single-view`}className='event-image' src={image.url} />
+          <img data-cy='image' className='event-image' src={image.url} />
         </div>
-        <div className="breweries-container">
+        <div data-cy="breweries" className="breweries-container">
           <Breweries 
             postalCode={_event._embedded.venues[0].postalCode}
             city={_event._embedded.venues[0].city.name.toLowerCase()}
