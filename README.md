@@ -34,7 +34,9 @@
 *More information can be found on [the official project specifications document](https://frontend.turing.edu/projects/module-3/showcase.html).*
 
 ## Demonstration
-The video below demonstrates a user navigating the Rancid Tomatillos application . 
+The video below demonstrates a user navigating the Brew Beats application . 
+
+https://user-images.githubusercontent.com/67208858/223021121-956876cb-9467-44a8-ad02-a7ea338fa84f.mp4
 
 ## Technologies Used
 - React
