@@ -8,7 +8,7 @@
 
 .event-details {
   padding: 3% 0% 0% 3%;
-  width: 42%;
+  width: 50%;
   display: flex;
   flex-direction: column;
 }
@@ -16,6 +16,7 @@
 .event-ticket-details {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 }
 
 .event-text {
@@ -48,5 +49,59 @@
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   padding: 1% 0% 0% 3%;
-  margin: 8% 0% 0% 3%;
+  margin: 3% 0% 0% 3%;
+}
+
+.pop-saved {
+  background-color: rgb(229, 229, 229);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1500px) {
+  .event-headers h1 {
+    font-size: 1.7em;
+  }
+  .event-headers h2 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .event-details {
+    width: 50%;
+  }
+  .event-text {
+    font-size: 1em;
+  }
+} 
+
+@media screen and (max-width: 800px) {
+  .event-view-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .breweries-container {
+    width: 50%;
+    font-size: 1em;
+  }
+
+  .event-details {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .event-view-container {
+    width: 90%;
+  }
+  .event-text {
+    font-size: .7em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .event-text {
+    font-size: .5em;
+  }
 }

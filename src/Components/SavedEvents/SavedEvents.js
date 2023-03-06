@@ -9,27 +9,33 @@ const SavedEvents = ({events, removeSavedEvent}) => {
     removeSavedEvent(id)
   }
 
+  const savedEvents = events?.map(_event => {
+    return (
+      <div key={`${_event.id}-c`} className='card-container'>
+        <EventCard 
+          key={_event.id}
+          id={_event.id}
+          image={_event.image}
+          name={_event.name}
+          venue={_event.venue}
+          date={_event.date}
+        />
+        <button
+          data-cy={`${_event.id}-b`} 
+          onClick={(event) => handleClick(event.target.id)}
+          id={_event.id} 
+          key={`${_event.id}-b`}
+          >Remove from Saved Events</button>
+          </div>
+    )
+  })
+
   return (
     <>
-      <h1 className="saved-events-header">Your Events</h1>
+      <h1 data-cy="saved-header" className="saved-events-header">Your Events</h1>
       <div className="events-home">
         <div className="events-card-container">
-          {events.map(_event => 
-          <div key={`${_event.id}-c`} className='card-container'>
-            <EventCard 
-              key={_event.id}
-              id={_event.id}
-              image={_event.image}
-              name={_event.name}
-              venue={_event.venue}
-              date={_event.date}
-            />
-            <button 
-              onClick={(event) => handleClick(event.target.id)}
-              id={_event.id} 
-              key={`${_event.id}-b`}
-              >Remove from Saved Events</button>
-          </div>)}
+          {savedEvents}
         </div>
       </div>  
     </>

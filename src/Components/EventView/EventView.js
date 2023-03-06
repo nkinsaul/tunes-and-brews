@@ -10,6 +10,7 @@ const EventView = ({saveEvent}) => {
   const [_event, setEvent] = useState({});
   const [loading, setLoading] = useState(true);
   const [newError, setError] = useState(false);
+  const [saved, setSaved] = useState(false)
 
   const location = useLocation();
   const event_id = location.pathname.slice(8);
@@ -17,6 +18,7 @@ const EventView = ({saveEvent}) => {
   const handleClick = (event) => {
     event.preventDefault()
     saveEvent(event.target.id)
+    setSaved(true)
   }
 
   useEffect(() => {
@@ -28,40 +30,49 @@ const EventView = ({saveEvent}) => {
   const image = _event.images?.find(image => 
     image.ratio === '16_9' && image.width === 1024)
 
-  return (
-    <>
-      {
-      (newError) ? <Navigate to='/*' /> :
-      (loading) ? <h1>Loading...</h1> :
+  const displayEvent = () => {
+    let display;
+    (newError) ? display = <Navigate to ='/*' /> :
+    (loading) ? display = <h1>Loading...</h1> :
+    display = (
       <div data-cy={`${_event.id}-details`} className="event-view-container">
         <div className="event-details">
           <div className="event-text">
             <div className="event-headers">
-              <h1 className="element">{_event.name}</h1>
-              <h2 className="element">{_event._embedded.venues[0].name}</h2>
+              <h1 data-cy="name" className="element">{_event.name}</h1>
+              <h2 data-cy="venue" className="element">{_event._embedded.venues[0].name}</h2>
+              {(saved) && <p className="pop-saved" data-cy="pop-saved">Saved to your events!</p>}
             </div>
             <div className="event-ticket-details">
-              <p className="element">{dayjs(_event.dates.start.dateTime).format('MMM DD, YYYY')}</p>
-              {!_event.priceRanges ? <p>No ticket Data available</p> : 
-              <p className="element">Ticket price range: 
+              <p data-cy="date" className="element">{dayjs(_event.dates.start.dateTime).format('MMM DD, YYYY')}</p>
+              {!_event.priceRanges ? <p data-cy="ticket">No ticket Data available</p> : 
+              <p  className="element"> 
                 ${Math.round(_event.priceRanges[0].min)} - 
                 ${Math.round(_event.priceRanges[0].max)}
               </p>}
-              <a href={`${_event.url}`}>Buy Tickets</a>
-              <button id={_event.id} onClick={(e) => handleClick(e)} className="save-button">Save Event</button>
+              <a data-cy="url" href={`${_event.url}`}>Buy Tickets</a>
+              <button data-cy="save" id={_event.id} onClick={(e) => handleClick(e)} className="save-button">Save Event</button>
              </div>
           </div>
-          <img data-cy={`${_event.id}-single-view`}className='event-image' src={image.url} />
+          <img data-cy='image' className='event-image' src={image.url} />
         </div>
-        <div className="breweries-container">
+        <div data-cy="breweries" className="breweries-container">
           <Breweries 
             postalCode={_event._embedded.venues[0].postalCode}
             city={_event._embedded.venues[0].city.name.toLowerCase()}
           />
         </div>
-      </div>}
+      </div>
+    )
+      return display
+  }
+
+  return (
+    <>
+      {displayEvent()}
     </>
   )
+
 }
 
 export default EventView
