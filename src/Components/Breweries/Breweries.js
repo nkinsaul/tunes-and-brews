@@ -31,7 +31,7 @@ const Breweries = ({postalCode, city}) => {
   return (
     <>
       {(loading) ? <h1>Loading...</h1> :
-      <div>
+      <div className="breweries">
         <h1>Nearby Breweries</h1>
         {nearbyBreweries}
       </div>

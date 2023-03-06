@@ -30,7 +30,7 @@ const EventView = ({saveEvent}) => {
   const image = _event.images?.find(image => 
     image.ratio === '16_9' && image.width === 1024)
 
-  const displayEvents = () => {
+  const displayEvent = () => {
     let display;
     (newError) ? display = <Navigate to ='/*' /> :
     (loading) ? display = <h1>Loading...</h1> :
@@ -41,12 +41,12 @@ const EventView = ({saveEvent}) => {
             <div className="event-headers">
               <h1 data-cy="name" className="element">{_event.name}</h1>
               <h2 data-cy="venue" className="element">{_event._embedded.venues[0].name}</h2>
-              {(saved) && <p data-cy="pop-saved">Saved to your events!</p>}
+              {(saved) && <p className="pop-saved" data-cy="pop-saved">Saved to your events!</p>}
             </div>
             <div className="event-ticket-details">
               <p data-cy="date" className="element">{dayjs(_event.dates.start.dateTime).format('MMM DD, YYYY')}</p>
               {!_event.priceRanges ? <p data-cy="ticket">No ticket Data available</p> : 
-              <p  className="element">Ticket price range: 
+              <p  className="element"> 
                 ${Math.round(_event.priceRanges[0].min)} - 
                 ${Math.round(_event.priceRanges[0].max)}
               </p>}
@@ -69,7 +69,7 @@ const EventView = ({saveEvent}) => {
 
   return (
     <>
-      {displayEvents()}
+      {displayEvent()}
     </>
   )
 
