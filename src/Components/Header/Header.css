@@ -1,8 +1,4 @@
 .header {
-  /* background-image: url('file:///Users/nataliekinsaul/turing/mod3/projects/tunes-and-brews/resources/ranier_needle_night.jpeg');
-  background-repeat: no-repeat; */
-  /* background-size: 100%;
-   */
   background-color: rgb(20, 33, 61);
   font-family: 'Bangers', cursive;
   background-position: center;
@@ -25,4 +21,29 @@
 
 a {
   text-decoration: none;
+}
+
+@media screen and (max-width: 980px) {
+  .app-name {
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .app-name {
+    font-size: 3em;
+  }
+  .link  {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .app-name {
+    font-size: 1.5em;
+    letter-spacing: 5px;
+  }
+  .link  {
+    font-size: 1em;
+  }
 }
