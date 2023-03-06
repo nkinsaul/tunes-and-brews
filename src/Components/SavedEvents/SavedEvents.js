@@ -20,7 +20,8 @@ const SavedEvents = ({events, removeSavedEvent}) => {
           venue={_event.venue}
           date={_event.date}
         />
-        <button 
+        <button
+          data-cy={`${_event.id}-b`} 
           onClick={(event) => handleClick(event.target.id)}
           id={_event.id} 
           key={`${_event.id}-b`}

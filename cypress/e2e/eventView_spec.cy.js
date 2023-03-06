@@ -6,7 +6,6 @@ describe('Event view flows', () => {
     cy.visit('http://localhost:3000/events/vvG1HZ94ivZAwx')
   })
 
-
 it('User should see details about an event', () => {
   cy.get('[data-cy=vvG1HZ94ivZAwx-details]').should('be.visible')
   cy.get('[data-cy=name]').contains('Shania Twain: Queen Of Me Tour')
@@ -25,10 +24,24 @@ it('User should see a list of breweries', () => {
   cy.get('[data-cy=0-link]').should('be.visible')
 })
 
-it('User can save and remove an event from their saved events ', () => {
+it('User can save an event ', () => {
+  cy.get('[data-cy=save]').click()
+  cy.get('[data-cy=pop-saved]').should('be.visible')
+})
+
+it('User can see events they have saved ', () => {
   cy.get('[data-cy=save]').click()
   cy.get('[data-cy=pop-saved]').should('be.visible')
   cy.get('[data-cy=saved-link]').click()
+  cy.get('[data-cy=vvG1HZ94ivZAwx]').should('be.visible')
+})
+
+it.only('User can remove events they have saved', () => {
+  cy.get('[data-cy=save]').click()
+  cy.get('[data-cy=pop-saved]').should('be.visible')
+  cy.get('[data-cy=saved-link]').click()
+  cy.get('[data-cy=vvG1HZ94ivZAwx]').should('be.visible')
+  cy.get('[data-cy=vvG1HZ94ivZAwx-b]').click()
 })
 
 })
