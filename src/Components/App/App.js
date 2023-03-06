@@ -1,7 +1,7 @@
 
 import './App.css';
 import Header from '../Header/Header';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
 import EventView from '../EventView/EventView';
 import Events from '../Events/Events';
 import SavedEvents from '../SavedEvents/SavedEvents';
@@ -40,11 +40,15 @@ const App = () => {
   
   try {
     const eventsData = await events
+    if(eventsData?._embedded.events === null) {
+      throw new Error(error)
+    }
     const cleanedEventsData = await cleanEvents(eventsData._embedded.events)
     setEvents(cleanedEventsData)
     setLoading(false)
     } catch(error) {
       setError(true)
+      setLoading(false)
     }
   } 
 
@@ -58,7 +62,8 @@ const App = () => {
       <Routes>
 
           <Route exact path='/' element= {
-            (loading) ? <h1>Loading...</h1> : 
+            (loading) ? <h1>Loading...</h1> :
+            (error) ? <Navigate to ='/server-error' /> :
             <Events events={events}/>}
           />
 
