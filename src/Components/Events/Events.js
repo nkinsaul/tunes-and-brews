@@ -42,9 +42,8 @@ const Events = ({events}) => {
         >
           <div className="events-card-container">
             {renderEvents().map(_event => 
-            <SwiperSlide>
+            <SwiperSlide key={_event.id}>
               <EventCard 
-                key={_event.id}
                 id={_event.id}
                 image={_event.image}
                 name={_event.name}

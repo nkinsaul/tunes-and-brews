@@ -40,7 +40,6 @@ const App = () => {
   
   try {
     const eventsData = await events
-    console.log(eventsData)
     if(eventsData?._embedded.events === null) {
       throw new Error(error)
     }
@@ -62,7 +61,7 @@ const App = () => {
       <header>
         <Header />
       </header>
-      
+
       <Routes>
 
           <Route exact path='/' element= {
