@@ -26,14 +26,6 @@ const Events = ({events}) => {
     return filteredEvents ? filteredEvents : events 
   }
 
-  // function SlideNextButton() {
-  //   const swiper = useSwiper();
-  
-  //   return (
-  //     <button onClick={() => swiper.slideNext()}>Slide to the next slide</button>
-  //   );
-  // }
-
   return (
     <div className="events-home">
       <SearchForm updateSearch={updateSearch}/>
@@ -45,8 +37,8 @@ const Events = ({events}) => {
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log('slide change')}
         >
           <div className="events-card-container">
             {renderEvents().map(_event => 
