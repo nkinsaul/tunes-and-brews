@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.swiper-container {
+  width: 80%;
+}
+
 .events-card-container {
   background-color: rgb(255, 255, 255);
   display: grid;

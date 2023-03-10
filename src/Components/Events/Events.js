@@ -26,48 +26,45 @@ const Events = ({events}) => {
     return filteredEvents ? filteredEvents : events 
   }
 
-  function SlideNextButton() {
-    const swiper = useSwiper();
+  // function SlideNextButton() {
+  //   const swiper = useSwiper();
   
-    return (
-      <button onClick={() => swiper.slideNext()}>Slide to the next slide</button>
-    );
-  }
+  //   return (
+  //     <button onClick={() => swiper.slideNext()}>Slide to the next slide</button>
+  //   );
+  // }
 
   return (
-    <>
+    <div className="events-home">
       <SearchForm updateSearch={updateSearch}/>
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        slidesPerView={3}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
-      >
-        {/* <div className="events-card-container"> */}
-          {renderEvents().map(_event => 
-          <SwiperSlide>
-            <EventCard 
-              key={_event.id}
-              id={_event.id}
-              image={_event.image}
-              name={_event.name}
-              venue={_event.venue}
-              date={_event.date}
-            />
-          </SwiperSlide>)}
-        {/* </div> */}
-      
-      </Swiper>
-
-      <div className="events-home">
+      <div className="swiper-container">
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={3}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+        >
+          <div className="events-card-container">
+            {renderEvents().map(_event => 
+            <SwiperSlide>
+              <EventCard 
+                key={_event.id}
+                id={_event.id}
+                image={_event.image}
+                name={_event.name}
+                venue={_event.venue}
+                date={_event.date}
+              />
+            </SwiperSlide>)}
+          </div>
         
-        
-      </div>  
-    </>
+        </Swiper>
+      </div>
+    </div>
   )
 }
 
