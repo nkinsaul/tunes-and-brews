@@ -3,6 +3,13 @@ import PropTypes from 'prop-types';
 import './Events.css'
 import EventCard from "../EventCard/EventCard";
 import SearchForm from "../SearchForm/SearchForm";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { useSwiper } from 'swiper/react';
+import 'swiper/css';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const Events = ({events}) => {
 
@@ -19,12 +26,30 @@ const Events = ({events}) => {
     return filteredEvents ? filteredEvents : events 
   }
 
+  function SlideNextButton() {
+    const swiper = useSwiper();
+  
+    return (
+      <button onClick={() => swiper.slideNext()}>Slide to the next slide</button>
+    );
+  }
+
   return (
     <>
-      <div className="events-home">
-        <SearchForm updateSearch={updateSearch}/>
-        <div className="events-card-container">
+      <SearchForm updateSearch={updateSearch}/>
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={50}
+        slidesPerView={3}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
+      >
+        {/* <div className="events-card-container"> */}
           {renderEvents().map(_event => 
+          <SwiperSlide>
             <EventCard 
               key={_event.id}
               id={_event.id}
@@ -32,8 +57,15 @@ const Events = ({events}) => {
               name={_event.name}
               venue={_event.venue}
               date={_event.date}
-            />)}
-        </div>
+            />
+          </SwiperSlide>)}
+        {/* </div> */}
+      
+      </Swiper>
+
+      <div className="events-home">
+        
+        
       </div>  
     </>
   )
