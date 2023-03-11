@@ -21,6 +21,11 @@
   font-size: 1.3em;
 }
 
+.name, .venue, .date {
+  margin: 0;
+  text-align: center;
+}
+
 /* p {
   margin: 0;
   padding-left: 2%; 

@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   border: 1px solid black;
-  width: 60%;
+  width: 45%;
 }
 
 .inputs {
@@ -13,6 +13,11 @@
   display: flex;
   width: 80%;
   justify-content: space-evenly;
+}
+
+.search-header {
+  margin: 0;
+  height: 50%;
 }
 
 input {

@@ -13,8 +13,8 @@ const EventCard = ({image, name, venue, date, id}) => {
           <Link to ={`/events/${id}`}>
             <p data-cy={`${id}-name`} className="p name">{name}</p>
           </Link>
-            <p data-cy={`${id}-venue`} className="p">{venue}</p>
-            <p data-cy={`${id}-date`} className="p">{dayjs(date).format('MMM DD, YYYY')}</p>
+            <p data-cy={`${id}-venue`} className="venue">{venue}</p>
+            <p data-cy={`${id}-date`} className="date">{dayjs(date).format('MMM DD, YYYY')}</p>
           </div> 
       </div>
    
