@@ -1,14 +1,14 @@
 .events-home {
-  height: 100%;
-  padding-top: 3%;
+  height: 75%;
+  padding-top: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .swiper-container {
-  width: 80%;
-  padding-top: 3%;
+  width: 75%;
+  padding-top: 2%;
 }
 
 .events-card-container {

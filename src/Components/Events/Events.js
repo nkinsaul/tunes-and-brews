@@ -6,7 +6,7 @@ import SearchForm from "../SearchForm/SearchForm";
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useSwiper } from 'swiper/react';
 import 'swiper/css';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Keyboard, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
@@ -31,12 +31,14 @@ const Events = ({events}) => {
       <SearchForm updateSearch={updateSearch}/>
       <div className="swiper-container">
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Keyboard, Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
           slidesPerView={3}
-          navigation
+          slidesPerGroupSkip={6}
+          navigation={true}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
+          keyboard={{enabled: true,}}
           // onSwiper={(swiper) => console.log(swiper)}
           // onSlideChange={() => console.log('slide change')}
         >
