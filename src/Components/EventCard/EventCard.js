@@ -8,7 +8,7 @@ const EventCard = ({image, name, venue, date, id}) => {
   return (
     
       <div className="event-card" data-cy={id} >
-        <img className="event-images" data-cy={`${id}-img`} src={image}/>
+        <img className="event-images" data-cy={`${id}-img`} src={image} alt={name}/>
           <div className="event-info">
           <Link to ={`/events/${id}`}>
             <p data-cy={`${id}-name`} className="p name">{name}</p>

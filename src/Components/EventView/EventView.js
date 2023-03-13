@@ -34,7 +34,7 @@ const EventView = ({saveEvent}) => {
     .catch(() =>  {
       setError(true)
       setLoading(false)})
-  }, [])
+  }, [event_id])
 
   const image = _event.images?.find(image => 
     image.ratio === '16_9' && image.width === 1024)
@@ -59,7 +59,7 @@ const EventView = ({saveEvent}) => {
                 ${Math.round(_event.priceRanges[0].min)} - 
                 ${Math.round(_event.priceRanges[0].max)}
               </p>}
-              <a data-cy="url" href={`${_event.url}`}>Buy Tickets</a>
+              <a className="url" data-cy="url" href={`${_event.url}`}>Buy Tickets</a>
               <button data-cy="save" id={_event.id} onClick={(e) => handleClick(e)} className="save-button">Save Event</button>
              </div>
           </div>
