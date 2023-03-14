@@ -5,7 +5,7 @@
 .event-images {
   width: 100%;
   border-radius: 5px;
-  box-shadow: 0px 2px 6px 2px rgb(20 33 61);
+  box-shadow: 0px 2px 6px 2px rgb(137 137 137);
 }
 
 /* .event-info {
@@ -24,6 +24,7 @@
 .name, .venue, .date {
   margin: 0;
   text-align: center;
+  color: rgb(229, 229, 229);
 }
 
 a {
