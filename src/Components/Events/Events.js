@@ -39,8 +39,23 @@ const Events = ({events}) => {
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           keyboard={{enabled: true,}}
-          // onSwiper={(swiper) => console.log(swiper)}
-          // onSlideChange={() => console.log('slide change')}
+          breakpoints={{
+            1200: {
+              width: 1200,
+              slidesPerView: 3,
+              spaceBetween: 20
+            },
+            1000: {
+              width: 1000,
+              slidesPerView: 3,
+              // spaceBetween: 10
+            },
+            250: {
+              width: 250,
+              slidesPerView: 1,
+              spaceBetween: 12
+            }
+          }}
         >
           <div className="events-card-container">
             {renderEvents().map(_event => 

@@ -5,7 +5,7 @@
 .event-images {
   width: 100%;
   border-radius: 5px;
-  box-shadow: 0px 2px 6px 2px rgb(137 137 137);
+  /* box-shadow: 0px 2px 6px 2px rgb(137 137 137); */
 }
 
 /* .event-info {
@@ -24,7 +24,7 @@
 .name, .venue, .date {
   margin: 0;
   text-align: center;
-  color: rgb(229, 229, 229);
+  color: rgb(0, 0, 0);
 }
 
 a {
@@ -37,4 +37,17 @@ a {
   text-align: center;
 } */
 
+@media screen and (max-width: 850px) {
+  .event-card {
+    padding-bottom: 12%;
+  }
+}
 
+@media screen and (max-width: 300px) {
+  .event-card {
+    padding-bottom: 16%;
+  }
+  .event-images {
+    margin-bottom: 4%;
+  }
+}

@@ -7,7 +7,7 @@
 }
 
 .swiper-container {
-  width: 75%;
+  width: 72%;
   padding-top: 2%;
 }
 
@@ -27,14 +27,45 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .events-home {
+    padding-top: 6%;
+  }
+  .swiper-container {
+    width: 81%;
+    padding-top: 6%;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .events-card-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .swiper-container {
+    width: 75%;
+    padding-top: 10%;
+  }
+  .events-home {
+    padding-top: 5%;
   }
 }
 
 @media screen and (max-width: 500px) {
   .events-card-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .swiper-container {
+    width: 60%;
+    padding-top: 15%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .events-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .swiper-container {
+    width: 90%;
+    padding-top: 15%;
   }
 }
