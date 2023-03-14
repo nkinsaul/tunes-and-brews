@@ -19,45 +19,70 @@
 }
 
 .link {
-  color:rgb(252, 163, 17);
+  color:rgb(20, 33, 61);
   font-size: 2em;
+  background-color: rgb(229, 229, 229, .7);
+  width: 5%;
+  border-radius: 5px;
 }
 
 a {
   text-decoration: none;
 }
 
-/* @media screen and (max-width: 1500px) {
-  .header {
-    background-size: cover;
+@media screen and (max-width: 1500px) {
+  .link {
+    width: 15%
   }
-} */
+}
+
+@media screen and (max-width: 1200px) {
+  .app-name {
+    font-size: 4em;
+  }
+  .link {
+    width: 10%;
+  }
+}
 
 @media screen and (max-width: 980px) {
   .app-name {
-    font-size: 4em;
+    font-size: 5em;
   }
 }
 
 @media screen and (max-width: 660px) {
   .app-name {
     font-size: 3em;
+    margin-bottom: 10%
   }
   .link  {
     font-size: 1em;
+  }
+  .header {
+    align-items: flex-end;
   }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 450px) {
   .app-name {
-    font-size: 1.5em;
-    letter-spacing: 5px;
+    font-size: 4em;
   }
   .link  {
-    font-size: 1em;
+    font-size: 2em;
     margin: 3%;
+    width: 35%;
+  }
+}
+
+
+@media screen and (max-width: 375px) {
+  .link  {
+    font-size: 1.1em;
+    margin: 3%;
+    width: 45%;
   }
   .app-name {
-    font-size: 3.2em;
+    font-size: 3.5em;
   }
 }
