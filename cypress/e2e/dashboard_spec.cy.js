@@ -1,9 +1,9 @@
-// const ticketMasterKey = process.env.REACT_APP_TICKETMASTERKEY
+
 
 // describe('Dashboard flows', () => {
 //   beforeEach(() => {
 
-//     cy.intercept("GET", "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=385&apikey=GsEb44ExGWUeR5lOEg7Tugd2PdKAnKWl", {fixture: "mock.json"})
+//     cy.intercept("GET", "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=385&apikey=", {fixture: "mock.json"})
 
 //     cy.visit('http://localhost:3000/') 
 //   })
