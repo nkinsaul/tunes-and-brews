@@ -4,7 +4,6 @@ import './Events.css'
 import EventCard from "../EventCard/EventCard";
 import SearchForm from "../SearchForm/SearchForm";
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { useSwiper } from 'swiper/react';
 import 'swiper/css';
 import { Keyboard, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/css/navigation';

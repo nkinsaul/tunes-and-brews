@@ -10,12 +10,6 @@
   font-size: 1em;
 }
 
-/* @media screen and (max-width: 600px) {
-  .breweries {
-    width: 70%;
-  }
-} */
-
 @media screen and (max-width: 650px) {
   .breweries {
     font-size: .8em;

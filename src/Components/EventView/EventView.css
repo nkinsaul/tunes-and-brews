@@ -1,6 +1,6 @@
 
 .event-view-container {
-  width: 100%;
+  width: 90%;
   height: 68%;
   display: flex;
   justify-content: center;
@@ -44,7 +44,7 @@
   border: none;
   border-radius: 5px;
   background-color: rgb(170, 170, 170);
-  width: 33%;
+  width: 100%;
   font-size: .8em;
 }
 
@@ -83,7 +83,7 @@
 
 @media screen and (max-width: 1800px) {
   .save-button {
-    width: 45%;
+    width: 100%;
   }
 }
 
@@ -95,7 +95,7 @@
     font-size: 1em;
   }
   .save-button {
-    width: 60%;
+    width: 100%;
   }
 }
 
@@ -131,12 +131,8 @@
     align-items: center;
   }
   .breweries-container {
-    /* width: 65%; */
     font-size: 1em;
   }
-  /* .event-details {
-    width: 65%;
-  } */
   .save-button {
     width: 55%;
   }
