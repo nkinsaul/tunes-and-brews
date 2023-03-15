@@ -53,11 +53,12 @@ a {
 
 @media screen and (max-width: 660px) {
   .app-name {
-    font-size: 3em;
-    margin-bottom: 10%
+    font-size: 3.5em;
+    margin-bottom: 12%
   }
   .link  {
-    font-size: 1em;
+    font-size: 1.5em;
+    margin-bottom: 3%
   }
   .header {
     align-items: flex-end;

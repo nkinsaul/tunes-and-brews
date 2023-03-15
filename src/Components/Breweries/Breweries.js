@@ -32,7 +32,7 @@ const Breweries = ({postalCode, city}) => {
     <>
       {(loading) ? <h1>Loading...</h1> :
       <div className="breweries">
-        <h1>Nearby Breweries</h1>
+        <h1 className="brew-header">Nearby Breweries</h1>
         {nearbyBreweries}
       </div>
       }

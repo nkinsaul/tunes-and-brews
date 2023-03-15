@@ -48,7 +48,7 @@ const EventView = ({saveEvent}) => {
         <div className="event-details">
           <div className="event-text">
             <div className="event-headers">
-              <h1 data-cy="name" className="element">{_event.name}</h1>
+              <h1 data-cy="name" className="event-name">{_event.name}</h1>
               <h2 data-cy="venue" className="element">{_event._embedded.venues[0].name}</h2>
               {(saved) && <p className="pop-saved" data-cy="pop-saved">Saved to your events!</p>}
             </div>
