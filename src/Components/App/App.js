@@ -47,7 +47,7 @@ const App = () => {
     setEvents(cleanedEventsData)
     setLoading(false)
     } catch(error) {
-      setError(true)
+      setError(error)
       setLoading(false)
     }
   } 
@@ -57,13 +57,16 @@ const App = () => {
   },[])
 
   return (
-    <div className="app">
-      <Header />
+    <main>
+      <header>
+        <Header />
+      </header>
+
       <Routes>
 
           <Route exact path='/' element= {
             (loading) ? <h1>Loading...</h1> :
-            (error) ? <Navigate to ='/server-error' /> :
+            (error) ? <Navigate to ='/server-error' error={error}/> :
             <Events events={events}/>}
           />
 
@@ -76,7 +79,7 @@ const App = () => {
           <Route path='/*' element={<Error />}/>
 
       </Routes>
-    </div>
+    </main>
   );
 }
 

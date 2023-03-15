@@ -1,17 +1,21 @@
 .events-home {
-  /* height: 100%; */
-  padding-top: 3%;
+  height: 60%;
+  padding-top: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.swiper-container {
+  width: 72%;
+  padding-top: 2%;
+}
+
 .events-card-container {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(229, 229, 229);
   display: grid;
   overflow: auto;
   grid-template-columns: repeat(4, 1fr);
-  margin: 2%;
   grid-gap: 3%;
   padding: 3% 12% 0% 12%;
 }
@@ -22,14 +26,45 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .events-home {
+    padding-top: 6%;
+  }
+  .swiper-container {
+    width: 81%;
+    padding-top: 6%;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .events-card-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .swiper-container {
+    width: 75%;
+    padding-top: 10%;
+  }
+  .events-home {
+    padding-top: 5%;
   }
 }
 
 @media screen and (max-width: 500px) {
   .events-card-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .swiper-container {
+    width: 60%;
+    padding-top: 15%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .events-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .swiper-container {
+    width: 90%;
+    padding-top: 15%;
   }
 }

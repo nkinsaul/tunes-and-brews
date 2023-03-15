@@ -1,4 +1,4 @@
-import { redirect } from "react-router-dom"
+
 
 const ticketMasterKey = process.env.REACT_APP_TICKETMASTERKEY
 const beerMappingKey = process.env.REACT_APP_BEERMAPPING

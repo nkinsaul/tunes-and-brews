@@ -1,37 +1,37 @@
 .event-card {
-  width: 100%;
-  height: 100%;
+  padding-bottom: 10%;
 }
 
 .event-images {
   width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  box-shadow: 5px 0px 18px rgb(0, 0, 0);
+  border-radius: 5px;
 }
 
-.event-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 10px;
-  background-color: rgb(229, 229, 229, .6);
-  margin: 0;
-  width: 100%;
-  height: 41%;
-  position: relative;
-  color: rgb(0, 0, 0);
-  bottom: 48%;
-  text-align: left;
+.name {
+  font-size: 1.3em;
 }
 
-.p {
+.name, .venue, .date {
   margin: 0;
-  padding-left: 2%; 
   text-align: center;
+  color: rgb(0, 0, 0);
 }
 
 a {
   text-decoration: none;
 }
 
+@media screen and (max-width: 850px) {
+  .event-card {
+    padding-bottom: 12%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .event-card {
+    padding-bottom: 16%;
+  }
+  .event-images {
+    margin-bottom: 4%;
+  }
+}

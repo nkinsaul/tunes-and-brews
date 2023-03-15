@@ -11,7 +11,7 @@ const SearchForm = ({updateSearch}) => {
 
   return (
     <form className="search-form" onSubmit={(event) => event.preventDefault()}>
-      <h4>Search for Events</h4>
+      <h4 className="search-header">Search for Events</h4>
       <div className="inputs">
         <input 
           data-cy="search"

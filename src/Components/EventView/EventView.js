@@ -34,7 +34,7 @@ const EventView = ({saveEvent}) => {
     .catch(() =>  {
       setError(true)
       setLoading(false)})
-  }, [])
+  }, [event_id])
 
   const image = _event.images?.find(image => 
     image.ratio === '16_9' && image.width === 1024)
@@ -48,7 +48,7 @@ const EventView = ({saveEvent}) => {
         <div className="event-details">
           <div className="event-text">
             <div className="event-headers">
-              <h1 data-cy="name" className="element">{_event.name}</h1>
+              <h1 data-cy="name" className="event-name">{_event.name}</h1>
               <h2 data-cy="venue" className="element">{_event._embedded.venues[0].name}</h2>
               {(saved) && <p className="pop-saved" data-cy="pop-saved">Saved to your events!</p>}
             </div>
@@ -59,7 +59,7 @@ const EventView = ({saveEvent}) => {
                 ${Math.round(_event.priceRanges[0].min)} - 
                 ${Math.round(_event.priceRanges[0].max)}
               </p>}
-              <a data-cy="url" href={`${_event.url}`}>Buy Tickets</a>
+              <a className="url" data-cy="url" href={`${_event.url}`}>Buy Tickets</a>
               <button data-cy="save" id={_event.id} onClick={(e) => handleClick(e)} className="save-button">Save Event</button>
              </div>
           </div>

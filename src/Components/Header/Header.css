@@ -1,12 +1,16 @@
 .header {
   background-color: rgb(20, 33, 61);
+  background-image: url(file:///Users/nataliekinsaul/turing/mod3/projects/tunes-and-brews/resources/ranier_needle_night.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Bangers', cursive;
   background-position: center;
   color: rgb(252, 163, 17);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: relative;
+  height: 100%;
+  text-align: center;
 }
 
 .app-name {
@@ -15,35 +19,70 @@
 }
 
 .link {
-  color:rgb(252, 163, 17);
+  color:rgb(20, 33, 61);
   font-size: 2em;
+  background-color: rgb(229, 229, 229, .7);
+  width: 5%;
+  border-radius: 5px;
 }
 
 a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1500px) {
+  .link {
+    width: 15%
+  }
+}
+
+@media screen and (max-width: 1200px) {
   .app-name {
     font-size: 4em;
+  }
+  .link {
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .app-name {
+    font-size: 5em;
   }
 }
 
 @media screen and (max-width: 660px) {
   .app-name {
-    font-size: 3em;
+    font-size: 3.5em;
+    margin-bottom: 12%
   }
   .link  {
-    font-size: 1em;
+    font-size: 1.5em;
+    margin-bottom: 3%
+  }
+  .header {
+    align-items: flex-end;
   }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 450px) {
   .app-name {
-    font-size: 1.5em;
-    letter-spacing: 5px;
+    font-size: 4em;
   }
   .link  {
-    font-size: 1em;
+    font-size: 2em;
+    margin: 3%;
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .link  {
+    font-size: 1.1em;
+    margin: 3%;
+    width: 45%;
+  }
+  .app-name {
+    font-size: 3.5em;
   }
 }

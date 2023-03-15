@@ -6,16 +6,18 @@ import { Link } from "react-router-dom";
 
 const EventCard = ({image, name, venue, date, id}) => {
   return (
-    <Link to ={`/events/${id}`}>
+    
       <div className="event-card" data-cy={id} >
-        <img className="event-images" data-cy={`${id}-img`} src={image}/>
-        <div className="event-info">
-          <p data-cy={`${id}-name`}className="p">{name}</p>
-          <p data-cy={`${id}-venue`} className="p">{venue}</p>
-          <p data-cy={`${id}-date`} className="p">{dayjs(date).format('MMM DD, YYYY')}</p>
-        </div>
+        <img className="event-images" data-cy={`${id}-img`} src={image} alt={name}/>
+          <div className="event-info">
+          <Link to ={`/events/${id}`}>
+            <p data-cy={`${id}-name`} className="p name">{name}</p>
+          </Link>
+            <p data-cy={`${id}-venue`} className="venue">{venue}</p>
+            <p data-cy={`${id}-date`} className="date">{dayjs(date).format('MMM DD, YYYY')}</p>
+          </div> 
       </div>
-    </Link>
+   
   )
 }
 

@@ -21,6 +21,7 @@ const SavedEvents = ({events, removeSavedEvent}) => {
           date={_event.date}
         />
         <button
+          className='remove-button'
           data-cy={`${_event.id}-b`} 
           onClick={(event) => handleClick(event.target.id)}
           id={_event.id} 

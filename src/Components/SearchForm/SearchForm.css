@@ -1,10 +1,11 @@
 .search-form {
+  height: 10%;
   display: flex;
   padding: 1%;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
-  width: 60%;
+  border: 1px solid rgb(0, 0, 0);
+  width: 45%;
 }
 
 .inputs {
@@ -14,12 +15,27 @@
   justify-content: space-evenly;
 }
 
+.search-header {
+  margin: 0;
+  height: 50%;
+}
+
 input {
   width: 45%;
+}
+
+@media screen and (max-width: 1000px) {
+  .search-form {
+    width: 55%;
+  }
 }
 
 @media screen and (max-width: 600px) {
   input {
     width: 95%;
   }
+  .search-form {
+    width: 75%;
+  }
 }
+
