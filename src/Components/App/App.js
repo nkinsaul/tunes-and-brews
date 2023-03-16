@@ -47,7 +47,7 @@ const App = () => {
     setEvents(cleanedEventsData)
     setLoading(false)
     } catch(error) {
-      setError(error)
+      setError(true)
       setLoading(false)
     }
   } 
