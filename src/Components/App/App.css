@@ -8,3 +8,7 @@ main {
 header {
   height: 27%
 }
+
+.loading {
+  text-align: center;
+}

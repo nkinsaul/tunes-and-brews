@@ -41,7 +41,7 @@ const EventView = ({saveEvent}) => {
 
   const displayEvent = () => {
     let display;
-    (loading) ? display = <h1>Loading...</h1> :
+    (loading) ? display = <h1 className="loading">Loading...</h1> :
     (newError) ? display = <Navigate to ='/server-error' /> :
     display = (
       <div data-cy={`${_event.id}-details`} className="event-view-container">
