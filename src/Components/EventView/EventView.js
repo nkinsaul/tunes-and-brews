@@ -34,7 +34,7 @@ const EventView = ({saveEvent}) => {
     .catch(() =>  {
       setError(true)
       setLoading(false)})
-  }, [event_id])
+  }, [])
 
   const image = _event.images?.find(image => 
     image.ratio === '16_9' && image.width === 1024)
@@ -63,7 +63,7 @@ const EventView = ({saveEvent}) => {
               <button data-cy="save" id={_event.id} onClick={(e) => handleClick(e)} className="save-button">Save Event</button>
              </div>
           </div>
-          <img data-cy='image' className='event-image' src={image.url} />
+          <img data-cy='image' className='event-image' src={image.url} alt={`${_event.name}`}/>
         </div>
         <div data-cy="breweries" className="breweries-container">
           <Breweries 

@@ -47,7 +47,6 @@ const Events = ({events}) => {
             1000: {
               width: 1000,
               slidesPerView: 3,
-              // spaceBetween: 10
             },
             250: {
               width: 250,
