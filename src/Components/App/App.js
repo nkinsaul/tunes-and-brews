@@ -16,7 +16,7 @@ const App = () => {
   const [events, setEvents] = useState([])
   const [savedEvents, setSavedEvents] = useState([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
+  const [error, setError] = useState(false)
 
   const addSavedEvent = (savedEventId) => {
     const savedEvent = events.find(_event =>
