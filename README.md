@@ -1,4 +1,4 @@
-# Brew Beats
+# Brew Beats[https://brew-beats.vercel.app/}
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@
  
 
 ## Deployed
-- App is deployed at https://tunes-and-brews.vercel.app/
+- App is deployed at https://brew-beats.vercel.app/
 
 ## Developers
 - [Natalie Kinsaul](https://github.com/nkinsaul)
