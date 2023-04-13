@@ -1,4 +1,4 @@
-# Brew Beats[https://brew-beats.vercel.app/}
+# [Brew Beats](https://brew-beats.vercel.app/)
 
 ## Table of Contents
 
